@@ -129,7 +129,14 @@
           Option B (Formspree): set action="https://formspree.io/f/YOUR_ID" method="POST".
           Option C: point action at your NexusCRM lead-intake webhook for dogfooding.
         -->
-        <form name="demo-request" method="POST" data-netlify="true" action="thanks.html">
+        <!--
+          CURRENT WIRING (GitHub Pages has no form backend): submitting composes a
+          pre-filled email to hello@nexusaigta.ca in the visitor's mail app, then shows
+          thanks.html. To switch to a real backend later, remove the submit handler in
+          js/main.js and set action="https://formspree.io/f/YOUR_ID" method="POST",
+          or point action at a NexusCRM lead-intake webhook.
+        -->
+        <form name="demo-request" id="demo-form" method="POST" data-netlify="true" action="thanks.html">
           <input type="hidden" name="form-name" value="demo-request">
           <div class="form-grid">
             <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" required autocomplete="name"></div>
