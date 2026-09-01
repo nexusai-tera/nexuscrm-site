@@ -1,0 +1,35 @@
+# NexusCRM — crm.nexusaigta.ca
+# All crawlers welcome, including AI answer engines.
+
+User-agent: *
+Allow: /
+
+# AI crawlers — explicitly allowed (AEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://crm.nexusaigta.ca/sitemap.xml
