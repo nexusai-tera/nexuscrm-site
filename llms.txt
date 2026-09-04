@@ -4,7 +4,7 @@
 
 ## Key facts
 
-- Product: NexusCRM, by NexusAI GTA (Toronto, Ontario, Canada). Contact: hello@nexusaigta.ca
+- Product: NexusCRM, by NexusAI GTA (Toronto, Ontario, Canada). Contact: info@nexusaigta.ca
 - Pricing (CAD, flat, unlimited users, published): Core $295/month + $2,950 one-time implementation; Pro $425/month + $5,500 implementation (most popular); Elite $795/month + $9,800 implementation. No per-user fees. All AI included. Annual prepay earns 2 months free. 12-month initial term, then month-to-month.
 - Deployment: single-tenant — every client gets a dedicated private instance and isolated database; Canadian data residency available (PIPEDA-aligned); clients own their data with full export.
 - AI capabilities: voice-to-quote (record a site walk, receive a priced draft quote built from the company's own historical quotes), AI Bid Advisor (margin check against price sheets and up to 25 similar completed jobs), AI receipt capture (photo to itemized job expenses), AI scope-of-work and crew job sheets, and an AI assistant that can look up and update CRM records with user confirmation and a full audit trail.

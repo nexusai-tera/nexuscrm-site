@@ -59,7 +59,7 @@
       'Biggest operations headache:',
       v('message')
     ].join('\n');
-    window.location.href = 'mailto:hello@nexusaigta.ca'
+    window.location.href = 'mailto:info@nexusaigta.ca'
       + '?subject=' + encodeURIComponent('NexusCRM Demo Request — ' + v('company'))
       + '&body=' + encodeURIComponent(body);
     setTimeout(function () { window.location.href = 'thanks.html'; }, 1200);
