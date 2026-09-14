@@ -43,7 +43,7 @@
       "@id": "https://crm.nexusaigta.ca/industries.html#page",
       "url": "https://crm.nexusaigta.ca/industries.html",
       "name": "CRM for Service Businesses & Trades in Canada",
-      "description": "Industry hub for NexusCRM — AI-powered CRM and field service software for contractors, landscapers, plumbers, electricians, real estate teams and accountants across Canada.",
+      "description": "Industry hub for NexusCRM — AI-powered CRM and field service software for general contractors, renovation, fencing, interlock, concrete and asphalt paving contractors, landscapers, plumbers, electricians, real estate teams and accountants across Canada.",
       "inLanguage": "en-CA",
       "publisher": { "@id": "https://crm.nexusaigta.ca/#org" },
       "mainEntity": { "@id": "https://crm.nexusaigta.ca/industries.html#industry-list" }
@@ -53,12 +53,17 @@
       "@id": "https://crm.nexusaigta.ca/industries.html#industry-list",
       "name": "Industries served by NexusCRM",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "CRM for General Contractors", "url": "https://crm.nexusaigta.ca/industries/contractors.html" },
-        { "@type": "ListItem", "position": 2, "name": "CRM for Landscapers & Hardscape", "url": "https://crm.nexusaigta.ca/industries/landscapers.html" },
-        { "@type": "ListItem", "position": 3, "name": "CRM for Plumbers", "url": "https://crm.nexusaigta.ca/industries/plumbers.html" },
-        { "@type": "ListItem", "position": 4, "name": "CRM for Electricians & HVAC", "url": "https://crm.nexusaigta.ca/industries/electricians.html" },
-        { "@type": "ListItem", "position": 5, "name": "CRM for Real Estate Teams", "url": "https://crm.nexusaigta.ca/industries/real-estate.html" },
-        { "@type": "ListItem", "position": 6, "name": "CRM for Accountants", "url": "https://crm.nexusaigta.ca/industries/accountants.html" }
+        { "@type": "ListItem", "position": 1, "name": "CRM for General Contractors", "url": "https://crm.nexusaigta.ca/industries/general-contractors.html" },
+        { "@type": "ListItem", "position": 2, "name": "CRM for Renovation Contractors", "url": "https://crm.nexusaigta.ca/industries/renovation-contractors.html" },
+        { "@type": "ListItem", "position": 3, "name": "CRM for Fencing Contractors", "url": "https://crm.nexusaigta.ca/industries/fencing-contractors.html" },
+        { "@type": "ListItem", "position": 4, "name": "CRM for Interlock Contractors", "url": "https://crm.nexusaigta.ca/industries/interlock-contractors.html" },
+        { "@type": "ListItem", "position": 5, "name": "CRM for Concrete Contractors", "url": "https://crm.nexusaigta.ca/industries/concrete-contractors.html" },
+        { "@type": "ListItem", "position": 6, "name": "CRM for Asphalt & Paving Contractors", "url": "https://crm.nexusaigta.ca/industries/asphalt-paving-contractors.html" },
+        { "@type": "ListItem", "position": 7, "name": "CRM for Landscapers & Hardscape", "url": "https://crm.nexusaigta.ca/industries/landscapers.html" },
+        { "@type": "ListItem", "position": 8, "name": "CRM for Plumbers", "url": "https://crm.nexusaigta.ca/industries/plumbers.html" },
+        { "@type": "ListItem", "position": 9, "name": "CRM for Electricians & HVAC", "url": "https://crm.nexusaigta.ca/industries/electricians.html" },
+        { "@type": "ListItem", "position": 10, "name": "CRM for Real Estate Teams", "url": "https://crm.nexusaigta.ca/industries/real-estate.html" },
+        { "@type": "ListItem", "position": 11, "name": "CRM for Accountants", "url": "https://crm.nexusaigta.ca/industries/accountants.html" }
       ]
     },
     {
@@ -68,12 +73,12 @@
         {
           "@type": "Question",
           "name": "Which industries does NexusCRM work best for?",
-          "acceptedAnswer": { "@type": "Answer", "text": "NexusCRM works best for businesses that quote work, schedule people, and invoice customers: general contractors, landscapers and hardscapers, plumbers, electricians and HVAC, real estate teams, and accountants. It was built inside a real GTA contracting business, so field trades get the deepest fit — but the pipeline is the same for any service business." }
+          "acceptedAnswer": { "@type": "Answer", "text": "NexusCRM works best for businesses that quote work, schedule people, and invoice customers: general contractors, renovation, fencing, interlock, concrete and asphalt paving contractors, landscapers and hardscapers, plumbers, electricians and HVAC, real estate teams, and accountants. It was built inside a real GTA contracting business, so field trades get the deepest fit — but the pipeline is the same for any service business." }
         },
         {
           "@type": "Question",
           "name": "Does NexusCRM work for trades that aren't listed here?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Roofers, painters, cleaning companies, pool care, property maintenance, fencing, and paving businesses all run the same quote → accept → schedule → invoice → profit pipeline, so NexusCRM fits them out of the box. Implementation tailors your price book, quote templates, and pipeline stages to your trade — book a demo and we'll walk your exact workflow." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Roofers, painters, cleaning companies, pool care, deck builders, and property maintenance businesses all run the same quote → accept → schedule → invoice → profit pipeline, so NexusCRM fits them out of the box. Implementation tailors your price book, quote templates, and pipeline stages to your trade — book a demo and we'll walk your exact workflow." }
         },
         {
           "@type": "Question",
@@ -104,6 +109,7 @@
     <button class="nav-toggle" aria-expanded="false" aria-label="Menu">MENU</button>
     <div class="nav-links">
       <a href="features.html">Product</a>
+      <a href="ai-caller.html">AI Caller</a>
       <a href="industries.html" aria-current="page">Industries</a>
       <a href="pricing.html">Pricing</a>
       <a href="compare.html">Compare</a>
@@ -122,37 +128,54 @@
   <div class="wrap">
     <p class="eyebrow">Industries · Field Service Software Canada</p>
     <h1>One CRM for every <span>service business</span></h1>
-    <p class="lead">NexusCRM serves Canadian service businesses that quote, schedule, and invoice work: general contractors, landscapers and hardscapers, plumbers, electricians and HVAC, real estate teams, and accounting firms. Roofers, painters, cleaners, pool care, property maintenance, fencing, and paving companies fit the same pipeline. Every edition includes unlimited users, all AI features, and a private Canadian-hosted instance.</p>
+    <p class="lead">NexusCRM serves Canadian service businesses that quote, schedule, and invoice work. That includes general contractors, renovators, fencing, interlock, concrete and asphalt paving contractors, landscapers and hardscapers, plumbers, electricians and HVAC, real estate teams, and accounting firms. Roofers, painters, cleaners, pool care and property maintenance companies fit the same pipeline. Every edition includes unlimited users, all AI features, and a private Canadian-hosted instance.</p>
     <div class="btn-row">
       <a class="btn btn-solid" href="contact.html">Book a Demo</a>
       <a class="btn" href="pricing.html">See Pricing</a>
     </div>
-    <p class="note" style="margin-top:18px">Updated August 2026 · Prices in CAD · Built in Toronto by NexusAI GTA</p>
+    <p class="note" style="margin-top:18px">Updated September 2026 · Prices in CAD · Built in Toronto by NexusAI GTA</p>
   </div>
 </header>
 
-<section id="industries">
+<section id="contractors">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Purpose-tuned editions</p>
-      <h2>Which industries does NexusCRM serve?</h2>
-      <p class="lead">Six industries get purpose-tuned editions with their own price books, quote templates, and workflows — pick your trade for the full breakdown.</p>
+      <p class="eyebrow">Contractor editions</p>
+      <h2>Which contractors does NexusCRM serve?</h2>
+      <p class="lead">Six contractor trades get their own editions, with price books, quote templates, crew pay models and AI Caller scripts in each trade's units. Pick your trade for the full breakdown, or start at the <a href="industries/contractors.html">contractors hub</a>.</p>
     </div>
     <div class="grid g3">
-      <a class="card" href="industries/contractors.html"><span class="card-num">01 · CRM FOR CONTRACTORS</span><h3>General Contractors</h3><p>Talk through the walkthrough, send the quote that night, and get e-acceptance before the competition calls back. Receipts, crew hours, and materials land on a live per-job P&amp;L — so you see the real margin before the job closes, not at tax time. No office manager required.</p></a>
-      <a class="card" href="industries/landscapers.html"><span class="card-num">02 · CRM FOR LANDSCAPERS</span><h3>Landscapers &amp; Hardscape</h3><p>The trade NexusCRM was born in — built inside a real GTA contracting business. Voice-to-quote prices walkways, patios, and sod from your own past jobs, crews get day-before reminders, and every interlock job shows its live margin.</p></a>
-      <a class="card" href="industries/plumbers.html"><span class="card-num">03 · CRM FOR PLUMBERS</span><h3>Plumbers</h3><p>Emergency call at 7 a.m., voice-quote from the driveway, customer taps Accept before you've packed the van — invoice and schedule created automatically. Per-job profit tracking means callbacks and warranty work never hide the money.</p></a>
-      <a class="card" href="industries/electricians.html"><span class="card-num">04 · CRM FOR ELECTRICIANS</span><h3>Electricians &amp; HVAC</h3><p>Service calls, panel upgrades, installs, and maintenance runs on one crew schedule with multi-account Google Calendar sync. Live job costing shows which installs actually make money — and which service rates need to move.</p></a>
-      <a class="card" href="industries/real-estate.html"><span class="card-num">05 · CRM FOR REAL ESTATE</span><h3>Real Estate</h3><p>Relentless follow-up automation so no lead goes cold, showing schedules synced across calendars, and client portals for documents and updates. Commission tracking covers the whole team — unlimited agents at one flat price.</p></a>
-      <a class="card" href="industries/accountants.html"><span class="card-num">06 · CRM FOR ACCOUNTANTS</span><h3>Accountants</h3><p>Client intake, engagement pipelines, document collection through a private portal, and tax-season follow-up that runs itself. Role-based access and a before/after audit trail on every change keep client files controlled and traceable.</p></a>
+      <a class="card" href="industries/general-contractors.html"><span class="card-num">01 · CRM FOR GENERAL CONTRACTORS</span><h3>General Contractors</h3><p>Bid multi-trade projects with the Bid Advisor and put progress draws on payment schedules. Sequence subs on one synced calendar, and watch each project's live P&amp;L while it's still running.</p></a>
+      <a class="card" href="industries/renovation-contractors.html"><span class="card-num">02 · CRM FOR RENOVATION CONTRACTORS</span><h3>Renovation Contractors</h3><p>Quote kitchens, baths and basements in Good/Better/Best finishes, and get change orders signed on the homeowner's phone. Deposits and draws run on a schedule, and the margin shows mid-job instead of in March.</p></a>
+      <a class="card" href="industries/fencing-contractors.html"><span class="card-num">03 · CRM FOR FENCING CONTRACTORS</span><h3>Fencing Contractors</h3><p>Quote pressure-treated, cedar and vinyl by the linear foot. Split shared back lines between neighbours with project groups, pay install crews per foot, and let the AI Caller pick up the spring-rush calls you can't.</p></a>
+      <a class="card" href="industries/interlock-contractors.html"><span class="card-num">04 · CRM FOR INTERLOCK CONTRACTORS</span><h3>Interlock Contractors</h3><p>Voice-to-quote prices driveways, patios and re-levelling by the square foot from your own past jobs. Crew job sheets carry the base and paver quantities, and every install shows its live margin.</p></a>
+      <a class="card" href="industries/concrete-contractors.html"><span class="card-num">05 · CRM FOR CONCRETE CONTRACTORS</span><h3>Concrete Contractors</h3><p>Schedule form, pour and seal days as separate visits, reschedule rained-out pours without duplicate calendar events, and put ready-mix and pump costs on the job P&amp;L the day they land.</p></a>
+      <a class="card" href="industries/asphalt-paving-contractors.html"><span class="card-num">06 · CRM FOR ASPHALT &amp; PAVING</span><h3>Asphalt &amp; Paving Contractors</h3><p>Paving season is short, so call every driveway, lot and sealcoating lead within minutes. Quote from your own past paving jobs, and see on the profitability map which neighbourhoods actually make you money.</p></a>
     </div>
   </div>
 </section>
 
-<section class="band tight" id="also-fit">
+<section class="band" id="industries">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">More purpose-tuned editions</p>
+      <h2>Which other industries does NexusCRM serve?</h2>
+      <p class="lead">Five more industries get their own editions, with price books, quote templates and workflows to match. Pick yours for the full breakdown.</p>
+    </div>
+    <div class="grid g3">
+      <a class="card" href="industries/landscapers.html"><span class="card-num">07 · CRM FOR LANDSCAPERS</span><h3>Landscapers &amp; Hardscape</h3><p>The trade NexusCRM was born in, built inside a real GTA contracting business. Voice-to-quote prices walkways, patios, and sod from your own past jobs, crews get day-before reminders, and every interlock job shows its live margin.</p></a>
+      <a class="card" href="industries/plumbers.html"><span class="card-num">08 · CRM FOR PLUMBERS</span><h3>Plumbers</h3><p>Emergency call at 7 a.m., voice-quote from the driveway, and the customer taps Accept before you've packed the van. The invoice and schedule are created automatically, and per-job profit tracking means callbacks and warranty work never hide the money.</p></a>
+      <a class="card" href="industries/electricians.html"><span class="card-num">09 · CRM FOR ELECTRICIANS</span><h3>Electricians &amp; HVAC</h3><p>Service calls, panel upgrades, installs, and maintenance runs on one crew schedule with multi-account Google Calendar sync. Live job costing shows which installs actually make money, and which service rates need to move.</p></a>
+      <a class="card" href="industries/real-estate.html"><span class="card-num">10 · CRM FOR REAL ESTATE</span><h3>Real Estate</h3><p>Relentless follow-up automation so no lead goes cold, showing schedules synced across calendars, and client portals for documents and updates. Commission tracking covers the whole team, with unlimited agents at one flat price.</p></a>
+      <a class="card" href="industries/accountants.html"><span class="card-num">11 · CRM FOR ACCOUNTANTS</span><h3>Accountants</h3><p>Client intake, engagement pipelines, document collection through a private portal, and tax-season follow-up that runs itself. Role-based access and a before/after audit trail on every change keep client files controlled and traceable.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="tight" id="also-fit">
   <div class="wrap">
     <div class="section-head" style="margin-bottom:20px">
-      <p class="eyebrow">Beyond the big six</p>
+      <p class="eyebrow">Beyond the editions</p>
       <h2>What other trades fit NexusCRM?</h2>
       <p class="lead">Any business that quotes, schedules, and invoices runs the same pipeline — these trades fit out of the box, tuned to your workflow during implementation.</p>
     </div>
@@ -162,14 +185,13 @@
       <span class="pill">Cleaning Companies</span>
       <span class="pill">Pool Care</span>
       <span class="pill">Property Maintenance</span>
-      <span class="pill">Fencing</span>
-      <span class="pill">Paving &amp; Sealing</span>
+      <span class="pill">Deck Builders</span>
     </div>
     <p class="note" style="margin-top:16px">Don't see your trade? <a href="contact.html">Book a demo</a> — we'll walk your exact workflow and show you the fit.</p>
   </div>
 </section>
 
-<section id="universal-pipeline">
+<section class="band" id="universal-pipeline">
   <div class="wrap">
     <div class="section-head center" style="margin-inline:auto">
       <p class="eyebrow">The universal pipeline</p>
@@ -187,7 +209,7 @@
   </div>
 </section>
 
-<section class="band" id="tier-fit">
+<section id="tier-fit">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Right-sized</p>
@@ -208,7 +230,7 @@
   </div>
 </section>
 
-<section id="faq">
+<section class="band" id="faq">
   <div class="wrap">
     <div class="section-head center" style="margin-inline:auto">
       <p class="eyebrow">Straight answers</p>
@@ -217,11 +239,11 @@
     <div class="faq">
       <details>
         <summary>Which industries does NexusCRM work best for?</summary>
-        <div class="a"><p>NexusCRM works best for businesses that quote work, schedule people, and invoice customers: general contractors, landscapers and hardscapers, plumbers, electricians and HVAC, real estate teams, and accountants. It was built inside a real GTA contracting business, so field trades get the deepest fit — but the pipeline is the same for any service business.</p></div>
+        <div class="a"><p>NexusCRM works best for businesses that quote work, schedule people, and invoice customers: general contractors, renovation, fencing, interlock, concrete and asphalt paving contractors, landscapers and hardscapers, plumbers, electricians and HVAC, real estate teams, and accountants. It was built inside a real GTA contracting business, so field trades get the deepest fit — but the pipeline is the same for any service business.</p></div>
       </details>
       <details>
         <summary>Does NexusCRM work for trades that aren't listed here?</summary>
-        <div class="a"><p>Yes. Roofers, painters, cleaning companies, pool care, property maintenance, fencing, and paving businesses all run the same quote → accept → schedule → invoice → profit pipeline, so NexusCRM fits them out of the box. Implementation tailors your price book, quote templates, and pipeline stages to your trade — <a href="contact.html">book a demo</a> and we'll walk your exact workflow.</p></div>
+        <div class="a"><p>Yes. Roofers, painters, cleaning companies, pool care, deck builders, and property maintenance businesses all run the same quote → accept → schedule → invoice → profit pipeline, so NexusCRM fits them out of the box. Implementation tailors your price book, quote templates, and pipeline stages to your trade — <a href="contact.html">book a demo</a> and we'll walk your exact workflow.</p></div>
       </details>
       <details>
         <summary>How much does NexusCRM cost for a service business?</summary>
@@ -264,6 +286,7 @@
         <h4>Product</h4>
         <ul>
           <li><a href="features.html">Features</a></li>
+          <li><a href="ai-caller.html">AI Caller</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="compare.html">Compare</a></li>
           <li><a href="faq.html">FAQ</a></li>
@@ -272,7 +295,13 @@
       <div>
         <h4>Industries</h4>
         <ul>
-          <li><a href="industries/contractors.html">Contractors</a></li>
+          <li><a href="industries/contractors.html">All Contractors</a></li>
+          <li><a href="industries/general-contractors.html">General Contractors</a></li>
+          <li><a href="industries/renovation-contractors.html">Renovation</a></li>
+          <li><a href="industries/fencing-contractors.html">Fencing</a></li>
+          <li><a href="industries/interlock-contractors.html">Interlock</a></li>
+          <li><a href="industries/concrete-contractors.html">Concrete</a></li>
+          <li><a href="industries/asphalt-paving-contractors.html">Asphalt &amp; Paving</a></li>
           <li><a href="industries/landscapers.html">Landscapers</a></li>
           <li><a href="industries/plumbers.html">Plumbers</a></li>
           <li><a href="industries/electricians.html">Electricians &amp; HVAC</a></li>

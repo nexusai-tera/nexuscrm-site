@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Caller: Inbound, Outbound &amp; Follow-Up Calls | NexusCRM</title>
+<meta name="description" content="An AI caller that answers calls 24/7, phones new leads within minutes and follows up on quotes — wired into NexusCRM with NLPearl and n8n. From $297/mo CAD.">
+<link rel="canonical" href="https://crm.nexusaigta.ca/ai-caller.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Caller for Contractors — Inbound, Outbound &amp; Follow-Up Calls">
+<meta property="og:description" content="Answers every call, calls new leads within minutes, chases unsigned quotes — and logs every call into NexusCRM. NLPearl voice, n8n automations. From $297/mo CAD.">
+<meta property="og:url" content="https://crm.nexusaigta.ca/ai-caller.html">
+<meta property="og:site_name" content="NexusCRM by NexusAI GTA">
+<meta property="og:locale" content="en_CA">
+<meta property="og:image" content="https://crm.nexusaigta.ca/img/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NexusCRM — the AI-powered CRM for service businesses, built in Toronto">
+<meta name="twitter:image" content="https://crm.nexusaigta.ca/img/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Caller for Contractors — Inbound, Outbound &amp; Follow-Up Calls">
+<meta name="twitter:description" content="Answers every call, calls new leads within minutes, chases unsigned quotes — every call logged in NexusCRM. From $297/mo CAD.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .stack { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; position: relative; }
+  @media (max-width: 800px) { .stack { grid-template-columns: 1fr; } }
+  .stack .card { position: relative; }
+  .stack .card .pill { margin-top: 12px; }
+  .tier .t-mins { font-family: var(--mono); font-size: 0.8rem; color: var(--cyan); margin-bottom: 4px; }
+  .volume { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between; }
+  .volume h3 { margin: 0 0 4px; }
+  .volume p { margin: 0; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://crm.nexusaigta.ca/ai-caller.html#breadcrumbs",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crm.nexusaigta.ca/" },
+        { "@type": "ListItem", "position": 2, "name": "AI Caller", "item": "https://crm.nexusaigta.ca/ai-caller.html" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://crm.nexusaigta.ca/ai-caller.html#service",
+      "name": "NexusAI AI Caller",
+      "serviceType": "AI voice agent for inbound, outbound and follow-up phone calls, integrated with NexusCRM",
+      "url": "https://crm.nexusaigta.ca/ai-caller.html",
+      "provider": { "@id": "https://crm.nexusaigta.ca/#org" },
+      "areaServed": ["Greater Toronto Area", "Ontario", "Canada"],
+      "description": "An AI caller built on NLPearl voice agents and wired to NexusCRM with n8n automations. It answers inbound calls 24/7 and qualifies callers, phones new web and Meta Lead Ads leads within minutes, follows up on quotes that have not been accepted, transfers callers to a person on request, and logs every call summary and transcript against the lead in NexusCRM.",
+      "offers": [
+        { "@type": "Offer", "name": "AI Caller Answer", "price": "297", "priceCurrency": "CAD", "description": "Inbound answering. $297/month with 300 talk minutes included, $0.49/minute after, plus $750 one-time setup." },
+        { "@type": "Offer", "name": "AI Caller Answer + Follow-Up", "price": "597", "priceCurrency": "CAD", "description": "Inbound answering, speed-to-lead calls and quote follow-up calls. $597/month with 1,000 talk minutes included, $0.39/minute after, plus $1,500 one-time setup." },
+        { "@type": "Offer", "name": "AI Caller Growth", "price": "1197", "priceCurrency": "CAD", "description": "Everything in Answer + Follow-Up plus outbound campaigns to consented customer lists. $1,197/month with 2,500 talk minutes included, $0.33/minute after, plus $2,500 one-time setup." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://crm.nexusaigta.ca/ai-caller.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the NexusAI AI Caller?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The AI Caller is a voice agent that handles three kinds of calls for your business: it answers inbound calls 24/7 and qualifies the caller, it phones new web-form and Meta Lead Ads leads within minutes, and it follows up on quotes that haven't been accepted. It runs on NLPearl voice agents and is wired into NexusCRM with n8n automations, so every call ends up as a summary and transcript on the right lead." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the AI Caller connect to NexusCRM?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Through n8n. When a call ends, NLPearl sends the call summary, transcript and the details it collected to an n8n workflow, which creates or updates the lead in NexusCRM through a hashed API key with idempotency keys, so a retried automation still produces exactly one lead. In the other direction, NexusCRM's signed webhooks — quote emailed, quote accepted, lead lost — tell n8n when to queue a follow-up call and when to cancel one." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does the AI Caller cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Three plans, in CAD: Answer is $297/month with 300 talk minutes and $750 setup; Answer + Follow-Up is $597/month with 1,000 minutes and $1,500 setup; Growth is $1,197/month with 2,500 minutes and $2,500 setup. Extra minutes are $0.49, $0.39 and $0.33 per minute respectively. Only connected talk time counts — unanswered and busy dials are free. Businesses making 300 or more calls a day get volume pricing from $0.29 per minute. Plans are month-to-month, annual prepay earns two months free, and NexusCRM Elite clients have the setup fee waived." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will callers know they are talking to an AI?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The AI Caller introduces itself as an AI assistant for your company. The conversation itself is natural — it handles interruptions and follow-up questions — and any caller who asks for a person, or whose call is urgent, is transferred live to you or your office. The call summary is still logged to NexusCRM either way." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is AI outbound calling allowed in Canada?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We set the AI Caller up for consent-based calling only: it phones people who contacted you or asked you for a quote, never purchased or cold lists, and numbers on your do-not-call list are blocked from every campaign. Canada's telemarketing rules — including the CRTC Unsolicited Telecommunications Rules and the National Do Not Call List — still apply to your business, so we review your outbound use case with you during setup." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the AI Caller book site visits into my schedule?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It captures the caller's preferred days and times for a site visit and puts them on the lead, and your rep confirms the booking in NexusCRM, which then syncs to Google Calendar and sends the invite. Customer self-booking straight into the schedule is on the NexusCRM roadmap, so today a person confirms every booking — which also stops double-booked site walks." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="logo" href="index.html">[NEXUS<b>AI</b>_GTA]</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Menu">MENU</button>
+    <div class="nav-links">
+      <a href="features.html">Product</a>
+      <a href="ai-caller.html" aria-current="page">AI Caller</a>
+      <a href="industries.html">Industries</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="compare.html">Compare</a>
+      <a href="resellers.html">Partners</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" class="btn btn-solid">Book a Demo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / AI Caller</nav>
+</div>
+
+<header class="hero" style="padding-top:64px">
+  <div class="wrap">
+    <p class="eyebrow">NexusAI add-on · AI Caller</p>
+    <h1>The AI caller that <span>never lets a lead go cold</span></h1>
+    <p class="lead">The AI Caller answers every call to your business, day or night. It phones new leads within minutes of their enquiry and calls customers back when a quote sits unsigned. It runs on NLPearl voice agents and is wired into NexusCRM with n8n, so every call lands on the right lead with a summary and transcript. Nobody has to type it in.</p>
+    <div class="btn-row">
+      <a class="btn btn-solid" href="contact.html">Book a Demo</a>
+      <a class="btn" href="#pricing">See AI Caller Pricing</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="num">24/7</div><div class="lbl">every call answered</div></div>
+      <div class="stat"><div class="num">3</div><div class="lbl">inbound · outbound · follow-up</div></div>
+      <div class="stat"><div class="num">20+</div><div class="lbl">languages supported</div></div>
+      <div class="stat"><div class="num">$297</div><div class="lbl">from / month CAD</div></div>
+    </div>
+    <p class="note" style="margin-top:18px">Updated September 2026 · Prices in CAD · Voice by NLPearl · Automations by n8n · Records in NexusCRM</p>
+  </div>
+</header>
+
+<section class="band tight">
+  <div class="wrap center">
+    <p class="note">RUNNING IN PRODUCTION: this same NLPearl + n8n stack already places 800–1,000 calls a day for a NexusAI GTA client. It's the setup we run every day, and you get the same one.</p>
+  </div>
+</section>
+
+<section id="what">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Three jobs, one caller</p>
+      <h2>What does the AI Caller do?</h2>
+      <p class="lead">It covers the three calls contractors lose money on: the one you can't pick up, the lead you don't call back fast enough, and the quote nobody chases.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card"><span class="card-num">01 · INBOUND</span><h3>Answers every call</h3><p>At 7 p.m., on a Saturday, or while you're on a roof, it picks up in a natural voice. It answers questions about your service area and what you install, then qualifies the job: address, scope, timeline. The lead is in NexusCRM before the caller hangs up.</p></div>
+      <div class="card"><span class="card-num">02 · OUTBOUND</span><h3>Calls new leads in minutes</h3><p>When a website form or Meta Lead Ad comes in, the same automation that creates the lead also queues a call. The customer hears from you while they're still comparing contractors, not the next morning.</p></div>
+      <div class="card"><span class="card-num">03 · FOLLOW-UP</span><h3>Chases unsigned quotes</h3><p>A quote goes out and nothing comes back. After the number of days you choose, the AI Caller phones the customer to answer questions and find out what's holding them up. The moment they accept, the pending call is cancelled.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="inbound">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow">Inbound</p>
+        <h2>What happens when a customer calls after hours?</h2>
+        <p class="lead">The AI Caller answers, has a real conversation, and hands NexusCRM a qualified lead with the whole call attached. By the time you check your phone in the morning, the lead is already in your follow-up list for today.</p>
+        <ul class="check">
+          <li><b>Natural conversation</b>: it handles interruptions, "actually, it's the backyard too," and follow-up questions, in 20+ supported languages</li>
+          <li><b>Answers from your knowledge base</b>: service area, what you do and don't install, how quoting works, warranty basics</li>
+          <li><b>Qualifies in your trade's terms</b>: square feet of interlock, linear feet of fence, tonnes of asphalt, rooms in a reno</li>
+          <li><b>Live transfer</b>: callers who ask for a person, or have an urgent job, go straight to your cell or office line</li>
+          <li><b>Logged automatically</b>: summary, transcript and collected details land on the lead, tagged "AI Caller" as the source</li>
+        </ul>
+      </div>
+      <div class="terminal" role="img" aria-label="Illustration of the AI Caller answering an evening call, qualifying an interlock driveway enquiry and creating a lead in NexusCRM">
+        <div class="terminal-bar"><i></i><i></i><i></i><span class="t-title">ai caller · inbound line</span></div>
+        <div class="terminal-body">
+          <span class="d">▸ inbound call · (416) ●●●-7390 · 8:14 PM</span><br>
+          <span class="c">▸ ai caller answered</span> · intent: quote request<br>
+          &nbsp;&nbsp;service ·········· interlock driveway<br>
+          &nbsp;&nbsp;address ·········· Woodbridge, L4L <span class="g">✓</span><br>
+          &nbsp;&nbsp;scope ············ ~700 sq ft, remove asphalt <span class="g">✓</span><br>
+          &nbsp;&nbsp;timeline ········· before end of June <span class="g">✓</span><br>
+          &nbsp;&nbsp;site visit ······· Sat AM or weekdays after 5 <span class="g">✓</span><br><br>
+          <span class="d">▸ call ended · 3:41 · post-call summary ready</span><br>
+          <span class="c">▸ n8n → nexuscrm intake</span> · 1 lead (idempotent)<br><br>
+          <span class="g">✓ LEAD CREATED — source: AI Caller</span><br>
+          &nbsp;&nbsp;summary + transcript attached<br>
+          &nbsp;&nbsp;<span class="a">follow-up bucket: Today</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="outbound">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="terminal" role="img" aria-label="Illustration of the AI Caller phoning a new Meta lead within minutes, then making a follow-up call when a quote was not accepted after three days">
+        <div class="terminal-bar"><i></i><i></i><i></i><span class="t-title">ai caller · outbound + follow-up</span></div>
+        <div class="terminal-body">
+          <span class="d">▸ 10:02 AM · meta lead ad · "Fence quote — Oakville"</span><br>
+          <span class="c">▸ n8n → nexuscrm</span> · lead #1207 created<br>
+          <span class="c">▸ n8n → nlpearl</span> · outbound call queued<br>
+          <span class="d">▸ 10:04 AM · calling (905) ●●●-4418…</span><br>
+          <span class="g">✓ connected · 3:12 · qualified</span><br>
+          &nbsp;&nbsp;cedar privacy fence ~160 lin ft · 2 gates<br>
+          &nbsp;&nbsp;wants it done before the July long weekend<br>
+          <span class="d">▸ summary logged to lead #1207</span><br><br>
+          <span class="c">▸ quote #2210 emailed</span> · follow-up timer: 3 days<br>
+          <span class="a">▸ day 3 · not accepted → follow-up call</span><br>
+          <span class="g">✓ connected · 1:48</span> · "asked about a black<br>
+          &nbsp;&nbsp;aluminum gate instead of cedar"<br>
+          <span class="d">▸ summary logged · rep revises quote</span>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Outbound &amp; follow-up</p>
+        <h2>Why does calling a lead in minutes matter?</h2>
+        <p class="lead">A homeowner who fills in a form usually sends the same request to two or three other contractors. The first one to call gets the site visit. The AI Caller makes that call while the form is still open on their phone, and it keeps calling back until the quote is signed or lost.</p>
+        <ul class="check">
+          <li><b>Speed-to-lead</b>: web forms and Meta Lead Ads trigger a call as soon as the lead lands in NexusCRM</li>
+          <li><b>Retries you control</b>: no-answer retries follow the schedule and calling hours you set</li>
+          <li><b>Quote follow-up</b>: NexusCRM's "quote emailed" webhook starts the timer, and "quote accepted" cancels the call</li>
+          <li><b>Second chances</b>: a lead marked lost can get a friendly re-engagement call weeks later</li>
+          <li><b>Site-visit windows</b>: it collects when the customer is free, and your rep confirms the booking in NexusCRM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="wiring">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Under the hood</p>
+      <h2>How is the AI Caller wired into NexusCRM?</h2>
+      <p class="lead">Three systems, each doing the job it's best at. NLPearl talks, n8n moves the data, and NexusCRM keeps the record. Nothing depends on someone remembering to copy notes over.</p>
+    </div>
+    <div class="stack">
+      <div class="card"><div class="ico">◉</div><h3>NLPearl: the voice</h3><p>Natural, low-latency AI voice agents for inbound lines and outbound campaigns. It follows your script, pulls answers from your knowledge base, transfers calls live, and writes a post-call summary and transcript.</p><span class="pill">20+ languages</span></div>
+      <div class="card"><div class="ico">⇄</div><h3>n8n: the wiring</h3><p>Automation workflows listen for call events from NLPearl and webhooks from NexusCRM. They create leads, queue calls, start follow-up timers and cancel calls that are no longer needed, with every run logged.</p><span class="pill">event-driven</span></div>
+      <div class="card"><div class="ico">▤</div><h3>NexusCRM: the record</h3><p>Leads arrive through hashed API keys with duplicate-proof intake. Signed HMAC webhooks tell n8n when quotes are emailed, accepted or lost. Your pipeline, follow-ups and reporting stay in one place.</p><span class="pill">signed webhooks</span></div>
+    </div>
+    <div class="tbl-scroll" style="margin-top:36px">
+      <table class="cmp">
+        <thead><tr><th>When this happens</th><th>n8n does this</th><th>You see this in NexusCRM</th></tr></thead>
+        <tbody>
+          <tr><td>An inbound call ends</td><td>Sends NLPearl's summary, transcript and collected details to the intake API</td><td>A new lead, source "AI Caller", in today's follow-up list</td></tr>
+          <tr><td>A web form or Meta Lead Ad arrives</td><td>Creates the lead and adds it to the NLPearl outbound campaign</td><td>The lead, plus a call summary within minutes</td></tr>
+          <tr><td>A quote is emailed</td><td>Starts a follow-up timer for the number of days you choose</td><td>A follow-up call logged if the quote is still unsigned</td></tr>
+          <tr><td>A quote is accepted</td><td>Cancels any pending follow-up call for that customer</td><td>No awkward "just checking in" after they've signed</td></tr>
+          <tr><td>A lead is marked lost</td><td>Schedules a re-engagement call for later in the season</td><td>A second chance at jobs that went quiet</td></tr>
+          <tr><td>A caller asks for a person</td><td>NLPearl transfers the call live to your number</td><td>The call summary, even though a human finished the call</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:14px">Retried automations never create duplicates: NexusCRM intake uses idempotency keys, and its intake log shows exactly what each automation sent.</p>
+  </div>
+</section>
+
+<section id="trades">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Built for contractor phone lines</p>
+      <h2>Which contractors get the most from an AI caller?</h2>
+      <p class="lead">Any trade where the phone rings hardest while the crew is busiest. Each trade page shows the AI Caller working in that trade's language:</p>
+    </div>
+    <div class="grid g3">
+      <a class="card" href="industries/fencing-contractors.html"><span class="card-num">FENCING</span><h3>Fencing Contractors</h3><p>The spring rush brings dozens of "how much for 150 feet?" calls while you're setting posts. Every one gets answered and qualified.</p></a>
+      <a class="card" href="industries/interlock-contractors.html"><span class="card-num">INTERLOCK</span><h3>Interlock Contractors</h3><p>Driveway, patio or re-levelling? The caller's square footage, access and timeline are on the lead before your first site walk.</p></a>
+      <a class="card" href="industries/concrete-contractors.html"><span class="card-num">CONCRETE</span><h3>Concrete Contractors</h3><p>Rained-out pour days mean a lot of rescheduling calls. The AI Caller handles new enquiries so the office can deal with the schedule.</p></a>
+      <a class="card" href="industries/asphalt-paving-contractors.html"><span class="card-num">ASPHALT</span><h3>Asphalt &amp; Paving</h3><p>Paving season is short. Call every new driveway and sealcoating lead within minutes, and follow up before the plants close.</p></a>
+      <a class="card" href="industries/general-contractors.html"><span class="card-num">GENERAL CONTRACTING</span><h3>General Contractors</h3><p>Screen enquiries by project type, size and budget, so your estimator only walks the jobs worth bidding.</p></a>
+      <a class="card" href="industries/renovation-contractors.html"><span class="card-num">RENOVATION</span><h3>Renovation Contractors</h3><p>Homeowners researching a kitchen or basement call at night. It captures the scope and budget, then follows up on the quote.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="guardrails">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <p class="eyebrow">Guardrails</p>
+        <h2>How do you keep an AI caller on a leash?</h2>
+        <p class="lead">You decide what it says, who it calls, and when it hands a call to a human. Every call is recorded and summarized, so you can check its work.</p>
+        <ul class="check">
+          <li><b>Says it's an AI</b>: it introduces itself as an AI assistant for your company</li>
+          <li><b>Consent-based outbound</b>: it only calls people who contacted you or asked for a quote, never cold or purchased lists</li>
+          <li><b>Do-not-call respected</b>: blocked numbers are excluded from every campaign</li>
+          <li><b>Your script, approved</b>: we write it with you, and nothing goes live until you've signed off</li>
+          <li><b>Calling hours and spend caps</b>: outbound calls stay within your hours and pause at your monthly cap, while inbound calls are always answered</li>
+          <li><b>No pricing promises</b>: it collects scope and explains how you quote, and your quotes still come from NexusCRM</li>
+        </ul>
+      </div>
+      <div class="terminal">
+        <div class="terminal-bar"><i></i><i></i><i></i><span class="t-title">ai caller · settings</span></div>
+        <div class="terminal-body">
+          <span class="d">identity</span> ··········· <span class="c">"AI assistant for your company"</span><br>
+          <span class="d">inbound hours</span> ······ <span class="c">24/7</span><br>
+          <span class="d">outbound hours</span> ····· <span class="c">your calling window</span><br>
+          <span class="d">outbound list</span> ······ <span class="c">enquiries &amp; quotes only</span><br>
+          <span class="d">do-not-call</span> ········ <span class="g">✓ blocked on every campaign</span><br>
+          <span class="d">live transfer</span> ······ <span class="g">✓ on request or urgent</span><br>
+          <span class="d">recording</span> ·········· <span class="g">✓ summary + transcript</span><br>
+          <span class="d">crm logging</span> ········ <span class="g">✓ every call, via n8n</span><br>
+          <span class="d">monthly spend cap</span> ·· <span class="a">pauses outbound only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head center" style="margin-inline:auto">
+      <p class="eyebrow">AI Caller pricing</p>
+      <h2>How much does the AI Caller cost?</h2>
+      <p class="lead">A flat monthly plan with talk minutes included and a published rate after that. Only connected talk time counts, so unanswered and busy dials are free.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <div class="t-name">Answer</div>
+        <div class="t-price">$297<small>/mo CAD</small></div>
+        <div class="t-mins">300 talk minutes · ≈ 100 calls</div>
+        <div class="t-setup">+ $750 one-time setup · then $0.49/min</div>
+        <ul class="check">
+          <li>Inbound answering, 24/7</li>
+          <li>Caller qualification in your trade's terms</li>
+          <li>Knowledge-base answers: service area, services, process</li>
+          <li>Live transfer to your cell or office</li>
+          <li>Every call logged to NexusCRM with summary + transcript</li>
+          <li>1 local number, or forwarding from your line</li>
+          <li>2 simultaneous calls</li>
+        </ul>
+        <a class="btn" href="contact.html">Ask About Answer</a>
+      </div>
+      <div class="tier hot">
+        <div class="t-name">Answer + Follow-Up</div>
+        <div class="t-price">$597<small>/mo CAD</small></div>
+        <div class="t-mins">1,000 talk minutes · ≈ 330 calls</div>
+        <div class="t-setup">+ $1,500 one-time setup · then $0.39/min</div>
+        <ul class="check">
+          <li>Everything in Answer</li>
+          <li>Speed-to-lead calls on web forms + Meta Lead Ads</li>
+          <li>Quote follow-up calls on your timer</li>
+          <li>Auto-cancel when a quote is accepted</li>
+          <li>Lost-lead re-engagement calls</li>
+          <li>No-answer retries within your calling hours</li>
+          <li>3 simultaneous calls</li>
+        </ul>
+        <a class="btn btn-solid" href="contact.html">Book a Demo</a>
+      </div>
+      <div class="tier">
+        <div class="t-name">Growth</div>
+        <div class="t-price">$1,197<small>/mo CAD</small></div>
+        <div class="t-mins">2,500 talk minutes · ≈ 830 calls</div>
+        <div class="t-setup">+ $2,500 one-time setup · then $0.33/min</div>
+        <ul class="check">
+          <li>Everything in Answer + Follow-Up</li>
+          <li>Outbound campaigns to your consented customer list</li>
+          <li>Seasonal reactivation: spring fence, sealcoating, re-levelling</li>
+          <li>Custom n8n automations beyond the standard set</li>
+          <li>Monthly call review + script tuning</li>
+          <li>Multiple languages and scripts</li>
+          <li>5 simultaneous calls</li>
+        </ul>
+        <a class="btn" href="contact.html">Ask About Growth</a>
+      </div>
+    </div>
+    <div class="card volume">
+      <div>
+        <h3>Volume: 300+ calls a day</h3>
+        <p>Per-minute pricing from <b>$0.29/min CAD</b>, a dedicated number pool, more simultaneous calls, and custom reporting. Built for call centres, multi-location operators and high-volume lead programs.</p>
+      </div>
+      <a class="btn" href="contact.html">Get a Volume Quote</a>
+    </div>
+    <p class="note center" style="margin-top:22px">Month-to-month, no long contract · Annual prepay: 2 months free · NexusCRM Elite clients: setup fee waived · Unused minutes don't roll over · ≈ calls assumes a 3-minute average call</p>
+  </div>
+</section>
+
+<section class="band" id="setup">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What setup buys</p>
+      <h2>What's included in AI Caller setup?</h2>
+      <p class="lead">Setup is where the AI Caller learns your business. You don't hand in a form. We build it with you, test it and tune it.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card"><div class="ico">01</div><h3>Script &amp; knowledge base</h3><p>Your services, service area, what you won't take on, how quoting works and your warranty basics, written into the script and signed off by you.</p></div>
+      <div class="card"><div class="ico">02</div><h3>Number &amp; routing</h3><p>A new local number or forwarding from your existing line, plus live-transfer rules for urgent calls and callers who want a person.</p></div>
+      <div class="card"><div class="ico">03</div><h3>n8n workflows</h3><p>The call-to-lead, speed-to-lead and follow-up automations wired to your NexusCRM instance, then tested end to end.</p></div>
+      <div class="card"><div class="ico">04</div><h3>Qualification fields</h3><p>The questions your estimator actually needs answered, in your trade's units, mapped onto the lead record.</p></div>
+      <div class="card"><div class="ico">05</div><h3>Test calls</h3><p>We call it the way your customers will: price shoppers, "wrong trade," urgent jobs, callers who talk over it. We fix what breaks before launch.</p></div>
+      <div class="card"><div class="ico">06</div><h3>Launch tuning</h3><p>During the first weeks live, we review real call summaries and tighten the script where callers got stuck.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="math">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The math</p>
+      <h2>How does an AI caller compare with a receptionist?</h2>
+      <p class="lead">A receptionist is still great for the office. But the phone rings at night, on weekends and in the middle of spring rush, and those are the calls a receptionist isn't there for.</p>
+    </div>
+    <div class="tbl-scroll">
+      <table class="cmp">
+        <thead><tr><th></th><th>AI Caller: Answer + Follow-Up</th><th>Full-time receptionist</th><th>Voicemail</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>Monthly cost</td><td><b>$597 flat CAD</b> + minutes over 1,000</td><td>≈ $3,470 in wages alone at $20/hr, before payroll costs</td><td>$0, plus the jobs that go to whoever calls back first</td></tr>
+          <tr><td>Hours covered</td><td class="yes">24/7, including weekends and holidays</td><td class="no">≈ 40 of 168 hours a week</td><td class="no">None, it only records</td></tr>
+          <tr><td>Calls at once</td><td class="yes">3 simultaneous</td><td class="no">One at a time</td><td class="no">—</td></tr>
+          <tr><td>Calls new leads in minutes</td><td class="yes">Automatically</td><td class="no">When they get to it</td><td class="no">No</td></tr>
+          <tr><td>Follows up unsigned quotes</td><td class="yes">On your timer, auto-cancelled on acceptance</td><td class="no">If someone remembers</td><td class="no">No</td></tr>
+          <tr><td>Enters the lead in the CRM</td><td class="yes">Every call, with transcript</td><td class="no">Manually</td><td class="no">No</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:14px">Receptionist estimate: $20/hour × 40 hours × 52 weeks ÷ 12 months, wages only. It excludes CPP, EI, vacation pay and benefits.</p>
+  </div>
+</section>
+
+<section class="band" id="faq">
+  <div class="wrap">
+    <div class="section-head center" style="margin-inline:auto">
+      <p class="eyebrow">Straight answers</p>
+      <h2>AI Caller questions, answered</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>What is the NexusAI AI Caller?</summary>
+        <div class="a"><p>The AI Caller is a voice agent that handles three kinds of calls for your business: it answers inbound calls 24/7 and qualifies the caller, it phones new web-form and Meta Lead Ads leads within minutes, and it follows up on quotes that haven't been accepted. It runs on NLPearl voice agents and is wired into NexusCRM with n8n automations, so every call ends up as a summary and transcript on the right lead.</p></div>
+      </details>
+      <details>
+        <summary>How does the AI Caller connect to NexusCRM?</summary>
+        <div class="a"><p>Through n8n. When a call ends, NLPearl sends the call summary, transcript and the details it collected to an n8n workflow, which creates or updates the lead in NexusCRM through a hashed API key with idempotency keys, so a retried automation still produces exactly one lead. In the other direction, NexusCRM's signed webhooks — quote emailed, quote accepted, lead lost — tell n8n when to queue a follow-up call and when to cancel one. More on the CRM side on the <a href="features.html#leads">features page</a>.</p></div>
+      </details>
+      <details>
+        <summary>How much does the AI Caller cost?</summary>
+        <div class="a"><p>Three plans, in CAD: Answer is $297/month with 300 talk minutes and $750 setup; Answer + Follow-Up is $597/month with 1,000 minutes and $1,500 setup; Growth is $1,197/month with 2,500 minutes and $2,500 setup. Extra minutes are $0.49, $0.39 and $0.33 per minute respectively. Only connected talk time counts — unanswered and busy dials are free. Businesses making 300 or more calls a day get volume pricing from $0.29 per minute. Plans are month-to-month, annual prepay earns two months free, and NexusCRM Elite clients have the setup fee waived. NexusCRM's own <a href="pricing.html">flat pricing</a> is separate.</p></div>
+      </details>
+      <details>
+        <summary>Will callers know they are talking to an AI?</summary>
+        <div class="a"><p>Yes. The AI Caller introduces itself as an AI assistant for your company. The conversation itself is natural — it handles interruptions and follow-up questions — and any caller who asks for a person, or whose call is urgent, is transferred live to you or your office. The call summary is still logged to NexusCRM either way.</p></div>
+      </details>
+      <details>
+        <summary>Is AI outbound calling allowed in Canada?</summary>
+        <div class="a"><p>We set the AI Caller up for consent-based calling only: it phones people who contacted you or asked you for a quote, never purchased or cold lists, and numbers on your do-not-call list are blocked from every campaign. Canada's telemarketing rules — including the CRTC Unsolicited Telecommunications Rules and the National Do Not Call List — still apply to your business, so we review your outbound use case with you during setup.</p></div>
+      </details>
+      <details>
+        <summary>Can the AI Caller book site visits into my schedule?</summary>
+        <div class="a"><p>It captures the caller's preferred days and times for a site visit and puts them on the lead, and your rep confirms the booking in NexusCRM, which then syncs to Google Calendar and sends the invite. Customer self-booking straight into the schedule is on the NexusCRM <a href="features.html#roadmap">roadmap</a>, so today a person confirms every booking — which also stops double-booked site walks.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow" style="justify-content:center">Every call answered. Every lead logged.</p>
+    <h2>Hear the AI Caller take a real call</h2>
+    <p class="lead">Book a 25-minute demo. We'll call the AI Caller live, watch the lead land in NexusCRM, then send a quote and walk through the follow-up call it sets up.</p>
+    <div class="btn-row" style="justify-content:center;margin-top:26px">
+      <a class="btn btn-solid" href="contact.html">Book a Demo</a>
+      <a class="btn" href="#pricing">See AI Caller Pricing</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html">[NEXUS<b>AI</b>_GTA]</a>
+        <p class="blurb" style="margin-top:14px">NexusCRM is built by NexusAI GTA — a Toronto AI automation company. Your business. Automated.</p>
+        <p class="note">info@nexusaigta.ca · Toronto, ON, Canada</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="ai-caller.html">AI Caller</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="industries/contractors.html">All Contractors</a></li>
+          <li><a href="industries/general-contractors.html">General Contractors</a></li>
+          <li><a href="industries/renovation-contractors.html">Renovation</a></li>
+          <li><a href="industries/fencing-contractors.html">Fencing</a></li>
+          <li><a href="industries/interlock-contractors.html">Interlock</a></li>
+          <li><a href="industries/concrete-contractors.html">Concrete</a></li>
+          <li><a href="industries/asphalt-paving-contractors.html">Asphalt &amp; Paving</a></li>
+          <li><a href="industries/landscapers.html">Landscapers</a></li>
+          <li><a href="industries/plumbers.html">Plumbers</a></li>
+          <li><a href="industries/electricians.html">Electricians &amp; HVAC</a></li>
+          <li><a href="industries/real-estate.html">Real Estate</a></li>
+          <li><a href="industries/accountants.html">Accountants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://www.nexusaigta.ca">NexusAI GTA</a></li>
+          <li><a href="resellers.html">Partner Program</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 NexusAI GTA. All rights reserved. · <a href="https://nexusaigta.ca/privacy">Privacy Policy</a> · <a href="https://nexusaigta.ca/terms">Terms of Service</a></span>
+      <span>Made in Toronto 🍁 · Prices in CAD · Updated Sep 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

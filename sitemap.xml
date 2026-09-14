@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://crm.nexusaigta.ca/</loc><lastmod>2026-08-31</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://crm.nexusaigta.ca/features.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://crm.nexusaigta.ca/pricing.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/</loc><lastmod>2026-09-14</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/features.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/ai-caller.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/pricing.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://crm.nexusaigta.ca/compare.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://crm.nexusaigta.ca/jobber-alternative.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://crm.nexusaigta.ca/housecall-pro-alternative.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://crm.nexusaigta.ca/servicetitan-alternative.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://crm.nexusaigta.ca/canadian-crm.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://crm.nexusaigta.ca/best-crm-for-contractors-canada.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://crm.nexusaigta.ca/industries.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://crm.nexusaigta.ca/industries/contractors.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/industries.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/industries/contractors.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/industries/general-contractors.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/industries/renovation-contractors.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/industries/fencing-contractors.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/industries/interlock-contractors.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/industries/concrete-contractors.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/industries/asphalt-paving-contractors.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://crm.nexusaigta.ca/industries/landscapers.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://crm.nexusaigta.ca/industries/plumbers.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://crm.nexusaigta.ca/industries/electricians.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://crm.nexusaigta.ca/industries/real-estate.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://crm.nexusaigta.ca/industries/accountants.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://crm.nexusaigta.ca/resellers.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://crm.nexusaigta.ca/faq.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://crm.nexusaigta.ca/contact.html</loc><lastmod>2026-08-31</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/faq.html</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://crm.nexusaigta.ca/contact.html</loc><lastmod>2026-09-14</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>

@@ -55,7 +55,7 @@
         { "@type": "Offer", "name": "NexusCRM Pro", "price": "425", "priceCurrency": "CAD", "description": "Flat $425/month plus $5,500 one-time implementation. Unlimited users, full AI suite." },
         { "@type": "Offer", "name": "NexusCRM Elite", "price": "795", "priceCurrency": "CAD", "description": "Flat $795/month plus $9,800 one-time implementation. Custom development hours included." }
       ],
-      "featureList": "AI voice-to-quote, AI bid advisor, AI receipt capture, online quote acceptance, customer portal, invoicing, crew scheduling, Google Calendar sync, job profitability, payroll, commissions, lead intake from Meta Lead Ads and web forms"
+      "featureList": "AI voice-to-quote, AI bid advisor, AI receipt capture, online quote acceptance, customer portal, invoicing, crew scheduling, Google Calendar sync, job profitability, payroll, commissions, lead intake from Meta Lead Ads and web forms, AI Caller add-on for inbound, outbound and follow-up calls"
     },
     {
       "@type": "WebSite",
@@ -112,6 +112,7 @@
     <button class="nav-toggle" aria-expanded="false" aria-label="Menu">MENU</button>
     <div class="nav-links">
       <a href="features.html">Product</a>
+      <a href="ai-caller.html">AI Caller</a>
       <a href="industries.html">Industries</a>
       <a href="pricing.html">Pricing</a>
       <a href="compare.html">Compare</a>
@@ -245,6 +246,43 @@
   </div>
 </section>
 
+<section id="ai-caller">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="terminal" role="img" aria-label="Illustration of the AI Caller answering an evening call and creating a qualified lead in NexusCRM">
+        <div class="terminal-bar"><i></i><i></i><i></i><span class="t-title">ai caller · inbound line</span></div>
+        <div class="terminal-body">
+          <span class="d">▸ inbound call · (647) ●●●-5102 · 7:26 PM</span><br>
+          <span class="c">▸ ai caller answered</span> · intent: quote request<br>
+          &nbsp;&nbsp;service ·········· backyard fence + gate<br>
+          &nbsp;&nbsp;address ·········· Brampton, L6Y <span class="g">✓</span><br>
+          &nbsp;&nbsp;scope ············ ~120 lin ft, cedar <span class="g">✓</span><br>
+          &nbsp;&nbsp;timeline ········· within 4 weeks <span class="g">✓</span><br><br>
+          <span class="c">▸ n8n → nexuscrm intake</span> · 1 lead (idempotent)<br>
+          <span class="g">✓ LEAD CREATED — source: AI Caller</span><br>
+          &nbsp;&nbsp;summary + transcript attached<br><br>
+          <span class="c">▸ quote emailed</span> · follow-up call in 3 days<br>
+          <span class="d">▸ cancelled automatically if accepted first</span>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">New · AI Caller add-on</p>
+        <h2>Every call answered.<br>Every lead called back.</h2>
+        <p class="lead">The AI Caller answers your business line 24/7, phones new leads within minutes and follows up when a quote goes quiet. It runs on NLPearl voice agents and is wired into NexusCRM with n8n, so every call shows up on the lead with a summary and transcript.</p>
+        <ul class="check">
+          <li><b>Inbound</b>: qualifies callers in your trade's terms and transfers urgent calls live</li>
+          <li><b>Outbound</b>: speed-to-lead calls on web forms and Meta Lead Ads</li>
+          <li><b>Follow-up</b>: calls on unsigned quotes, cancelled automatically when they accept</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="ai-caller.html">See the AI Caller</a>
+          <a class="btn" href="ai-caller.html#pricing">Plans from $297/mo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="features">
   <div class="wrap">
     <div class="section-head">
@@ -274,7 +312,7 @@
       <p class="lead">Any business that quotes work, schedules people, and invoices customers. Purpose-tuned editions per industry:</p>
     </div>
     <div class="grid g3">
-      <a class="card" href="industries/contractors.html"><span class="card-num">01</span><h3>General Contractors</h3><p>Quotes to crews to profit — without the office manager you haven't hired yet.</p></a>
+      <a class="card" href="industries/contractors.html"><span class="card-num">01</span><h3>Contractors</h3><p>General contractors, renovators, fencing, interlock, concrete and asphalt paving. Each trade has its own edition, from quotes to crews to profit.</p></a>
       <a class="card" href="industries/landscapers.html"><span class="card-num">02</span><h3>Landscapers &amp; Hardscape</h3><p>The industry NexusCRM was born in. Material ratios, job sheets, crew scheduling.</p></a>
       <a class="card" href="industries/plumbers.html"><span class="card-num">03</span><h3>Plumbers</h3><p>From emergency call to paid invoice — quote on-site by voice, get accepted same day.</p></a>
       <a class="card" href="industries/electricians.html"><span class="card-num">04</span><h3>Electricians &amp; HVAC</h3><p>Service calls, installs, and maintenance work with live job costing.</p></a>
@@ -452,6 +490,7 @@
         <h4>Product</h4>
         <ul>
           <li><a href="features.html">Features</a></li>
+          <li><a href="ai-caller.html">AI Caller</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="compare.html">Compare</a></li>
           <li><a href="faq.html">FAQ</a></li>
@@ -460,7 +499,13 @@
       <div>
         <h4>Industries</h4>
         <ul>
-          <li><a href="industries/contractors.html">Contractors</a></li>
+          <li><a href="industries/contractors.html">All Contractors</a></li>
+          <li><a href="industries/general-contractors.html">General Contractors</a></li>
+          <li><a href="industries/renovation-contractors.html">Renovation</a></li>
+          <li><a href="industries/fencing-contractors.html">Fencing</a></li>
+          <li><a href="industries/interlock-contractors.html">Interlock</a></li>
+          <li><a href="industries/concrete-contractors.html">Concrete</a></li>
+          <li><a href="industries/asphalt-paving-contractors.html">Asphalt &amp; Paving</a></li>
           <li><a href="industries/landscapers.html">Landscapers</a></li>
           <li><a href="industries/plumbers.html">Plumbers</a></li>
           <li><a href="industries/electricians.html">Electricians &amp; HVAC</a></li>
