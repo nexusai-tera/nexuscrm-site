@@ -135,7 +135,7 @@ section.tight { padding: 56px 0; }
 }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--cyan); text-decoration: none; }
 .nav-toggle { display: none; background: none; border: 1px solid var(--line); color: var(--cyan); font-family: var(--mono); padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
-@media (max-width: 880px) {
+@media (max-width: 940px) {
   .nav-toggle { display: block; margin-left: auto; }
   .nav-links {
     display: none;
@@ -170,6 +170,10 @@ section.tight { padding: 56px 0; }
 .btn:hover { background: var(--cyan-glow); box-shadow: 0 0 24px var(--cyan-glow); text-decoration: none; transform: translateY(-1px); }
 .btn-solid { background: var(--cyan); color: #04211d; border-color: var(--cyan); font-weight: 400; }
 .btn-solid:hover { background: #4dffe9; box-shadow: 0 0 32px var(--cyan-glow); }
+/* .nav-links a sets a muted (near-white) colour that outranks .btn-solid — keep the CTA text dark */
+.nav-links a.btn-solid,
+.nav-links a.btn-solid:hover,
+.nav-links a.btn-solid[aria-current="page"] { color: #04211d; }
 .btn-ghost { border-color: var(--line); color: var(--muted); background: transparent; }
 .btn-ghost:hover { color: var(--cyan); border-color: var(--cyan-border); box-shadow: none; }
 .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
