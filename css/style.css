@@ -398,6 +398,54 @@ table.cmp { width: 100%; border-collapse: collapse; min-width: 640px; font-size:
 .quote p { font-size: 1.15rem; line-height: 1.6; font-style: italic; color: var(--white); }
 .quote footer { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); }
 
+/* ---------- before / after ---------- */
+/* Two columns of matched pairs. The grid keeps each pair on one row, so a long
+   "before" and a short "after" still line up. On narrow screens it collapses to
+   a single column and each cell carries its own label from data-l. */
+.ba {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.ba > div {
+  padding: 20px 26px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+.ba > div:nth-child(odd) { background: var(--panel); }
+.ba > div:nth-child(even) { background: var(--cyan-faint); border-left: 1px solid var(--line); }
+.ba-head {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-top: none !important;
+  padding-top: 18px !important;
+  padding-bottom: 14px !important;
+}
+.ba-head.x { color: var(--red); }
+.ba-head.v { color: var(--cyan); }
+.ba p { margin: 0; }
+.ba .t { display: block; color: var(--white); margin-bottom: 4px; }
+.ba > div:nth-child(even) .t { color: var(--cyan); }
+@media (max-width: 760px) {
+  .ba { grid-template-columns: 1fr; }
+  .ba > div:nth-child(even) { border-left: none; }
+  .ba .ba-head { display: none; }
+  .ba > div::before {
+    content: attr(data-l);
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 8px;
+  }
+}
+
 /* ---------- CTA band ---------- */
 .cta-band {
   text-align: center;
