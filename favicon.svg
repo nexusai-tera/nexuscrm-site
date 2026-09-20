@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#05060a"/>
-  <rect x="4" y="4" width="56" height="56" rx="9" fill="none" stroke="#00ffe0" stroke-opacity="0.35" stroke-width="2"/>
-  <text x="32" y="44" font-family="Courier New, monospace" font-size="34" font-weight="bold" fill="#00ffe0" text-anchor="middle">N</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Nexus AI">
+  <title>Nexus AI</title>
+  <rect width="64" height="64" rx="12" fill="#000000"/>
+  <rect x="4" y="4" width="56" height="56" rx="9" fill="none" stroke="#00FFD1" stroke-opacity="0.35" stroke-width="2"/>
+  <g transform="translate(16.72 51.84) scale(0.05669 -0.05669)" fill="#00FFD1">
+    <path d="M160 0H79V700H221L379 74V700H460V0H317L160 626Z"/>
+  </g>
 </svg>
