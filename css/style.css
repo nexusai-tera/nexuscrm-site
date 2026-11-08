@@ -136,7 +136,7 @@ section.tight { padding: 56px 0; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--cyan); text-decoration: none; }
 .nav-toggle { display: none; background: none; border: 1px solid var(--line); color: var(--cyan); font-family: var(--mono); padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
 @media (max-width: 940px) {
-  .nav-toggle { display: block; margin-left: auto; }
+  .nav-toggle { display: block; margin-left: auto; min-height: 44px; padding: 6px 14px; }
   .nav-links {
     display: none;
     position: absolute;
@@ -523,11 +523,25 @@ footer.site {
 .divider-glow { height: 1px; background: linear-gradient(90deg, transparent, var(--cyan-border), transparent); border: 0; margin: 0; }
 .note { font-family: var(--mono); font-size: 0.78rem; color: var(--dim); }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.two-col > * { min-width: 0; }
 @media (max-width: 880px) { .two-col { grid-template-columns: 1fr; gap: 36px; } }
 
 .breadcrumbs { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.08em; color: var(--dim); padding-top: 26px; }
 .breadcrumbs a { color: var(--dim); }
 .breadcrumbs a:hover { color: var(--cyan); }
+
+/* ---------- customer proof ---------- */
+.proof-lead { max-width: 46em; margin: 0 auto 26px; color: var(--muted); font-size: 1.08rem; }
+.logo-strip { list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; max-width: 860px; }
+.logo-strip li { border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.logo-strip img { display: block; width: 100%; height: auto; }
+@media (max-width: 560px) { .logo-strip { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+.proof-links { margin-top: 22px; }
+.stats-4 { display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 24px 44px; margin-top: 0; }
+@media (max-width: 640px) { .stats-4 { grid-template-columns: repeat(2, 1fr); } }
+.disclosure { border-left: 2px solid var(--amber); padding: 4px 0 4px 16px; color: var(--muted); font-size: 0.92rem; margin: 26px 0 0; max-width: 56em; }
+.disclosure b { color: var(--white); }
+.terms-plain { color: var(--muted); font-size: 0.95rem; margin: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

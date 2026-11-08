@@ -1,17 +1,18 @@
 # NexusCRM
 
-> NexusCRM is an AI-powered CRM and field service management platform for service businesses — general contractors, renovation, fencing, interlock, concrete and asphalt paving contractors, landscapers, plumbers, electricians, HVAC, real estate agents, and accountants. Built and supported in Toronto, Canada by NexusAI GTA (nexusaigta.ca). Flat monthly pricing with unlimited users, all AI features included, and a dedicated private instance per client with Canadian hosting available.
+> NexusCRM is an AI-powered CRM and field service management platform for service businesses — general contractors, renovation, fencing, interlock, concrete and asphalt paving contractors, landscapers, plumbers, electricians, HVAC, real estate agents, and accountants. Built and supported in Toronto, Canada by NexusAI GTA (nexusaigta.ca). Flat monthly pricing with unlimited users, AI built into every plan, and a dedicated private instance per client with Canadian hosting available.
 
 ## Key facts
 
 - Product: NexusCRM, by NexusAI GTA (Toronto, Ontario, Canada). Contact: info@nexusaigta.ca
-- Pricing (CAD, flat, unlimited users, published): Core $295/month + $2,950 one-time implementation; Pro $425/month + $5,500 implementation (most popular); Elite $795/month + $9,800 implementation. No per-user fees. All AI included. Annual prepay earns 2 months free. 12-month initial term, then month-to-month.
+- Pricing (CAD, flat, unlimited users, published): Core $295/month + $2,950 one-time implementation; Pro $425/month + $5,500 implementation (most popular); Elite $795/month + $9,800 implementation. No per-user fees. AI is built into every plan; voice-to-quote, Bid Advisor and receipt capture start on Pro; AI Caller is a separate add-on billed by talk minute. Annual prepay earns 2 months free. 12-month initial term, then month-to-month.
 - Deployment: single-tenant — every client gets a dedicated private instance and isolated database; Canadian data residency available (PIPEDA-aligned); clients own their data with full export.
 - AI capabilities: voice-to-quote (record a site walk, receive a priced draft quote built from the company's own historical quotes), AI Bid Advisor (margin check against price sheets and up to 25 similar completed jobs), AI receipt capture (photo to itemized job expenses), AI scope-of-work and crew job sheets, and an AI assistant that can look up and update CRM records with user confirmation and a full audit trail.
-- AI Caller (NexusAI add-on, available now): NLPearl voice agents wired into NexusCRM with n8n automations. Answers inbound calls 24/7 and qualifies callers, calls new web-form and Meta Lead Ads leads within minutes, follows up on quotes that have not been accepted (cancelled automatically on acceptance), transfers to a person on request, and logs a summary and transcript on the lead after every call. Plans (CAD): Answer $297/month with 300 talk minutes + $750 setup; Answer + Follow-Up $597/month with 1,000 minutes + $1,500 setup; Growth $1,197/month with 2,500 minutes + $2,500 setup; volume pricing from $0.29/minute for 300+ calls/day. Only connected talk time counts. Month-to-month.
+- AI Caller (NexusAI add-on, early access): NLPearl voice agents wired into NexusCRM with n8n automations. Answers inbound calls 24/7 and qualifies callers, calls new web-form and Meta Lead Ads leads within minutes, follows up on quotes that have not been accepted (cancelled automatically on acceptance), transfers to a person on request, and logs a summary and transcript on the lead after every call. Plans (CAD): Answer $297/month with 300 talk minutes + $750 setup; Answer + Follow-Up $597/month with 1,000 minutes + $1,500 setup; Growth $1,197/month with 2,500 minutes + $2,500 setup; volume pricing from $0.29/minute for 300+ calls/day. Only connected talk time counts. Month-to-month.
 - Core platform: lead intake (web forms, Meta Lead Ads), follow-up automation, multi-option quotes with online e-acceptance, automatic invoice and project creation, crew scheduling with Google Calendar sync, customer portal, live per-job profit and loss, payroll and commissions, role-based access control, audit logging.
 - Roadmap (not yet available): SMS text messaging, online card payments, QuickBooks Online sync, customer self-booking.
 - Implementation: typically live in about two weeks; includes branding, data migration, integrations, and team training.
+- Trial and guarantee: free 14-day trial on a real job after a demo, for crews of 3 or more, no card; 30-day launch guarantee on the implementation fee. Full terms: https://crm.nexusaigta.ca/trial-guarantee.html
 - Partner program: referral (20% of MRR for 12 months + 15% of setup), certified reseller (25% of MRR for account lifetime + 30% of setup), and white-label (wholesale $2,995 + $235/month per instance; partner sets retail price).
 
 ## Pages
@@ -32,6 +33,9 @@
 - [Partner Program](https://crm.nexusaigta.ca/resellers.html): referral, certified reseller, and white-label tracks
 - [FAQ](https://crm.nexusaigta.ca/faq.html): pricing, implementation, security, data ownership, roadmap
 - [Contact](https://crm.nexusaigta.ca/contact.html): book a demo
+- [About](https://crm.nexusaigta.ca/about.html): founder Shaheen Rashidi and Reformity Inc.
+- [Customers](https://crm.nexusaigta.ca/customers.html): businesses on NexusCRM and the AZ Hardscapes case study
+- [Trial and guarantee](https://crm.nexusaigta.ca/trial-guarantee.html): free trial and launch guarantee terms
 - [Best CRM for Contractors in Canada 2026](https://crm.nexusaigta.ca/best-crm-for-contractors-canada.html): honest six-tool ranked comparison with CAD pricing
 - [Jobber Alternative](https://crm.nexusaigta.ca/jobber-alternative.html): fair head-to-head vs Jobber for Canadian crews
 - [Housecall Pro Alternative](https://crm.nexusaigta.ca/housecall-pro-alternative.html): fair head-to-head vs Housecall Pro

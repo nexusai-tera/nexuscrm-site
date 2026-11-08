@@ -29,6 +29,8 @@
 <style>
   .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+  .form-grid > * { min-width: 0; }
+  .field input, .field select, .field textarea { max-width: 100%; }
   .field { display: flex; flex-direction: column; gap: 7px; }
   .field.full { grid-column: 1 / -1; }
   .field label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan); }
@@ -78,7 +80,7 @@
         {
           "@type": "Question",
           "name": "How much does NexusCRM cost?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Flat monthly pricing in CAD with unlimited users: Core is $295/month plus $2,950 one-time implementation, Pro is $425/month plus $5,500, and Elite is $795/month plus $9,800. All AI features are included in every tier — the full breakdown is published on the pricing page." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Flat monthly pricing in CAD with unlimited users: Core is $295/month plus $2,950 one-time implementation, Pro is $425/month plus $5,500, and Elite is $795/month plus $9,800. AI is built into every plan, with voice-to-quote, Bid Advisor and receipt capture starting on Pro — the full breakdown is published on the pricing page." }
         },
         {
           "@type": "Question",
@@ -121,7 +123,7 @@
   <div class="wrap">
     <p class="eyebrow">25 minutes · No pressure · Updated August 2026</p>
     <h1>Book a <span>demo</span></h1>
-    <p class="lead">Tell us a bit about your business and we'll come back within one business day with times. We'll walk <em>your</em> workflow — lead to quote to money in the bank — and give you a straight answer on fit.</p>
+    <p class="lead">Tell us a bit about your business and we'll come back within one business day with times. We'll walk <em>your</em> workflow — lead to quote to money in the bank — and give you a straight answer on fit. Crews of 3 or more can then <a href="trial-guarantee.html">try it free for 14 days on a real job</a>.</p>
   </div>
 </header>
 
@@ -235,7 +237,7 @@
       </details>
       <details>
         <summary>How much does NexusCRM cost?</summary>
-        <div class="a"><p>Flat monthly pricing in CAD with unlimited users: Core is $295/month plus $2,950 one-time implementation, Pro is $425/month plus $5,500, and Elite is $795/month plus $9,800. All AI features are included in every tier — the full breakdown is published on the <a href="pricing.html">pricing page</a>.</p></div>
+        <div class="a"><p>Flat monthly pricing in CAD with unlimited users: Core is $295/month plus $2,950 one-time implementation, Pro is $425/month plus $5,500, and Elite is $795/month plus $9,800. AI is built into every plan, with voice-to-quote, Bid Advisor and receipt capture starting on Pro — the full breakdown is published on the <a href="pricing.html">pricing page</a>.</p></div>
       </details>
       <details>
         <summary>Do I need to prepare anything for the demo?</summary>
@@ -300,6 +302,9 @@
         <h4>Company</h4>
         <ul>
           <li><a href="https://www.nexusaigta.ca">NexusAI GTA</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="customers.html">Customers</a></li>
+          <li><a href="trial-guarantee.html">Trial &amp; Guarantee</a></li>
           <li><a href="resellers.html">Partner Program</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -313,5 +318,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4d758b221b004ed5a006079db28f154e"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
