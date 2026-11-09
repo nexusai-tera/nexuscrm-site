@@ -40,12 +40,37 @@
   }
 })();
 
-// demo form → composes a pre-filled email (static hosting has no form backend)
+// demo form → posts to Formspree, which emails info@nexusaigta.ca.
+// The thank-you page only appears once Formspree has accepted the request.
 (function () {
+  // remember where this visit started, so the request can report it from any page
+  var TOUCH_KEY = 'nexuscrm-first-touch';
+  var touch;
+  try { touch = JSON.parse(sessionStorage.getItem(TOUCH_KEY)); } catch (err) {}
+  if (!touch) {
+    var params = new URLSearchParams(location.search);
+    touch = { landing_page: location.pathname, referrer: document.referrer };
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'].forEach(function (k) {
+      if (params.get(k)) touch[k] = params.get(k);
+    });
+    try { sessionStorage.setItem(TOUCH_KEY, JSON.stringify(touch)); } catch (err) {}
+  }
+
   var form = document.getElementById('demo-form');
   if (!form) return;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+  var button = form.querySelector('button[type="submit"]');
+  var error = document.getElementById('form-error');
+  var idleLabel = button.textContent;
+  var sending = false;
+
+  function setSending(on) {
+    sending = on;
+    button.disabled = on;
+    button.textContent = on ? 'Sending…' : idleLabel;
+  }
+
+  // if the send fails, the visitor can still reach us with what they typed
+  function emailFallback() {
     var v = function (n) { var el = form.elements[n]; return el && el.value ? el.value : '—'; };
     var body = [
       'Demo request from crm.nexusaigta.ca', '',
@@ -59,9 +84,40 @@
       'Biggest operations headache:',
       v('message')
     ].join('\n');
-    window.location.href = 'mailto:info@nexusaigta.ca'
+    return 'mailto:info@nexusaigta.ca'
       + '?subject=' + encodeURIComponent('NexusCRM Demo Request — ' + v('company'))
       + '&body=' + encodeURIComponent(body);
-    setTimeout(function () { window.location.href = 'thanks.html'; }, 1200);
+  }
+
+  // the button stays in "Sending…" after success, so reset it on a back-button return
+  window.addEventListener('pageshow', function (e) { if (e.persisted) setSending(false); });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (sending) return;
+    setSending(true);
+    error.hidden = true;
+
+    var data = new FormData(form);
+    data.append('_subject', 'NexusCRM Demo Request — ' + form.elements.company.value);
+    Object.keys(touch).forEach(function (k) { if (touch[k]) data.append(k, touch[k]); });
+
+    var controller = new AbortController();
+    var timeout = setTimeout(function () { controller.abort(); }, 15000);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' },
+      signal: controller.signal
+    }).then(function (res) {
+      clearTimeout(timeout);
+      if (!res.ok) throw new Error('Form rejected: ' + res.status);
+      window.location.href = 'thanks.html';
+    }).catch(function () {
+      clearTimeout(timeout);
+      setSending(false);
+      document.getElementById('form-email-fallback').href = emailFallback();
+      error.hidden = false;
+    });
   });
 })();

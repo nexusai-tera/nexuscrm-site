@@ -131,25 +131,13 @@
   <div class="wrap">
     <div class="two-col" style="align-items:start">
       <div>
-        <!--
-          FORM WIRING: this form posts nowhere by default (static site).
-          Option A (Netlify): the data-netlify attribute below activates Netlify Forms automatically on deploy.
-          Option B (Formspree): set action="https://formspree.io/f/YOUR_ID" method="POST".
-          Option C: point action at your NexusCRM lead-intake webhook for dogfooding.
-        -->
-        <!--
-          CURRENT WIRING (GitHub Pages has no form backend): submitting composes a
-          pre-filled email to info@nexusaigta.ca in the visitor's mail app, then shows
-          thanks.html. To switch to a real backend later, remove the submit handler in
-          js/main.js and set action="https://formspree.io/f/YOUR_ID" method="POST",
-          or point action at a NexusCRM lead-intake webhook.
-        -->
-        <form name="demo-request" id="demo-form" method="POST" data-netlify="true" action="thanks.html">
-          <input type="hidden" name="form-name" value="demo-request">
+        <!-- Submitted by js/main.js to Formspree, which emails info@nexusaigta.ca. -->
+        <form name="demo-request" id="demo-form" method="POST" action="https://formspree.io/f/mljjqebr">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-grid">
             <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" required autocomplete="name"></div>
             <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" type="text" required autocomplete="organization"></div>
-            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email" pattern=".+@.+\..+" title="Enter a full email address, like you@company.ca"></div>
             <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
             <div class="field"><label for="f-industry">Industry</label>
               <select id="f-industry" name="industry" required>
@@ -194,6 +182,7 @@
           <div class="btn-row" style="margin-top:22px">
             <button class="btn btn-solid" type="submit">Request My Demo</button>
           </div>
+          <p class="form-error" id="form-error" role="alert" hidden>That didn't send, and your details are still in the form. Please try again, call <a href="tel:+14372416287">(437) 241-6287</a>, or <a id="form-email-fallback" href="mailto:info@nexusaigta.ca">email your details to us</a>.</p>
           <p class="note" style="margin-top:14px">We'll only use this to reply to you. No lists, no spam.</p>
         </form>
       </div>

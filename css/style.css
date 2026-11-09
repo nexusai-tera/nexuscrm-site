@@ -522,6 +522,8 @@ footer.site {
 .tag-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0; }
 .divider-glow { height: 1px; background: linear-gradient(90deg, transparent, var(--cyan-border), transparent); border: 0; margin: 0; }
 .note { font-family: var(--mono); font-size: 0.78rem; color: var(--dim); }
+.form-error { margin-top: 14px; padding: 12px 14px; border: 1px solid var(--red); border-radius: var(--r); font-size: 0.92rem; }
+.btn:disabled { opacity: 0.6; cursor: wait; transform: none; box-shadow: none; }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .two-col > * { min-width: 0; }
 @media (max-width: 880px) { .two-col { grid-template-columns: 1fr; gap: 36px; } }
