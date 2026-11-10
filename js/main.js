@@ -71,7 +71,6 @@
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
     window.gtag('config', GA_ID, {
-      cookie_domain: location.hostname,
       allow_google_signals: false,
       allow_ad_personalization_signals: false
     });
@@ -81,12 +80,15 @@
     document.head.appendChild(script);
   }
 
+  // Google sets its cookies on the parent domain (.nexusaigta.ca), so clear them at every level
   function clearAnalyticsCookies() {
+    var parts = location.hostname.split('.');
     document.cookie.split(';').forEach(function (cookie) {
       var name = cookie.split('=')[0].trim();
-      if (name.indexOf('_ga') === 0) {
-        document.cookie = name + '=; Max-Age=0; path=/; domain=' + location.hostname;
-        document.cookie = name + '=; Max-Age=0; path=/';
+      if (name.indexOf('_ga') !== 0) return;
+      document.cookie = name + '=; Max-Age=0; path=/';
+      for (var i = 0; i < parts.length - 1; i++) {
+        document.cookie = name + '=; Max-Age=0; path=/; domain=' + parts.slice(i).join('.');
       }
     });
   }
