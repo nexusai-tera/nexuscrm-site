@@ -1,0 +1,160 @@
+# Publishes the NexusCRM blog (CONTRACTS.md sections 6 and 7b).
+# - schedule / manual run: pull ready posts and unpublish requests from the n8n feed (sync.mjs),
+#   then render the blog (build.mjs) and commit any change.
+# - push to master touching the blog sources: render and commit (no sync).
+# Pushes made with GITHUB_TOKEN do not start a Pages build for a branch-deployed site, so after
+# a push this job asks the Pages API for one and waits up to 5 minutes for it.
+name: Publish blog
+
+on:
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'blog/posts/**'
+      - 'scripts/blog/**'
+      - 'img/blog/**'
+      - 'index.html'
+      - 'css/style.css'
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: blog-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - name: Check out master
+        # pinned to the commit of v4.4.0 (what the v4 tag pointed at on 2026-11-11)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Check Node.js
+        run: |
+          node --version
+          major="$(node -p 'process.versions.node.split(".")[0]')"
+          if [ "$major" -lt 18 ]; then
+            echo "::error::Node.js 18 or newer is required; found $(node --version)"
+            exit 1
+          fi
+
+      - name: Sync posts from n8n
+        id: sync
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        env:
+          BLOG_FEED_URL: https://nexusaigta.app.n8n.cloud/webhook/nexuscrm-blog?action=feed
+        run: node scripts/blog/sync.mjs
+
+      - name: Build blog
+        run: node scripts/blog/build.mjs
+
+      - name: Commit and push
+        id: push
+        run: |
+          set -u
+          # Remember what sync changed in blog/posts (build never touches it), so the change can
+          # be re-applied on top of a newer master if the push is rejected.
+          delta="$RUNNER_TEMP/sync-delta.txt"
+          saved="$RUNNER_TEMP/sync-files"
+          mkdir -p "$saved"
+          git add -A -- blog/posts
+          git diff --cached --name-status --no-renames -- blog/posts > "$delta"
+          while IFS=$'\t' read -r st f; do
+            if [ "$st" != "D" ]; then cp "$f" "$saved/$(basename "$f")"; fi
+          done < "$delta"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          commit_all() {
+            git add -A -- blog sitemap.xml llms.txt
+            if git diff --cached --quiet; then return 1; fi
+            git commit -q -m "Publish blog updates"
+          }
+          if ! commit_all; then
+            echo "Nothing changed; no commit."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # the master this run synced against
+          base="$(git rev-parse HEAD~1)"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:master; then
+              echo "pushed=true" >> "$GITHUB_OUTPUT"
+              echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt); rebuilding on top of the latest master."
+            sleep $((attempt * 10))
+            git fetch -q origin master
+            # A person changed one of the synced post files on master meanwhile: do not overwrite
+            # or delete their version. The next scheduled run syncs again against the new master.
+            while IFS=$'\t' read -r st f; do
+              if ! git diff --quiet "$base" origin/master -- "$f"; then
+                echo "::error::$f changed on master during this run; not re-applying the sync result"
+                exit 1
+              fi
+            done < "$delta"
+            git reset -q --hard origin/master
+            # re-apply the sync result, then regenerate (the output is deterministic, so a fresh
+            # build on the new master replaces any conflicting generated file)
+            while IFS=$'\t' read -r st f; do
+              if [ "$st" = "D" ]; then rm -f -- "$f"; else mkdir -p "$(dirname "$f")"; cp "$saved/$(basename "$f")" "$f"; fi
+            done < "$delta"
+            node scripts/blog/build.mjs || { echo "::error::The rebuild on the latest master failed"; exit 1; }
+            if ! commit_all; then
+              echo "Master already has these changes; nothing to push."
+              echo "pushed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+          echo "::error::Could not push the blog update after 3 attempts"
+          exit 1
+
+      - name: Request a Pages build
+        if: steps.push.outputs.pushed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          API: https://api.github.com/repos/${{ github.repository }}/pages/builds
+          SHA: ${{ steps.push.outputs.sha }}
+        run: |
+          code="$(curl -sS -o "$RUNNER_TEMP/pages-request.json" -w '%{http_code}' -X POST \
+            -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" \
+            "$API" || echo 000)"
+          if [ "$code" != "201" ] && [ "$code" != "200" ]; then
+            echo "::warning::Pages build request returned HTTP $code; the site may not update until the next push by a person."
+            cat "$RUNNER_TEMP/pages-request.json" 2>/dev/null || true
+            exit 0
+          fi
+          echo "Pages build requested (HTTP $code); waiting for the build of $SHA"
+          status="unknown"
+          deadline=$((SECONDS + 300))
+          while [ "$SECONDS" -lt "$deadline" ]; do
+            sleep 15
+            latest="$(curl -sS -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" "$API/latest" || echo '{}')"
+            status="$(printf '%s' "$latest" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const j=JSON.parse(s);process.stdout.write((j.status||"unknown")+" "+(j.commit||""))}catch{process.stdout.write("unknown")}})')"
+            echo "Latest Pages build: $status"
+            case "$status" in
+              "built $SHA") echo "Pages build finished for $SHA"; exit 0 ;;
+              "errored $SHA") echo "::error::The GitHub Pages build for $SHA errored"; exit 1 ;;
+            esac
+          done
+          echo "::warning::No finished Pages build for $SHA after 5 minutes (last seen: $status)"
+
+      - name: Report a failed sync
+        if: steps.sync.outcome == 'failure'
+        run: |
+          echo "::error::sync.mjs reported a problem: either the n8n blog feed could not be read (exit 1, nothing synced) or a ready post failed validation and was not published (exit 2; the other posts were applied). See the 'Sync posts from n8n' step."
+          exit 1

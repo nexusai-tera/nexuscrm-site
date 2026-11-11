@@ -1,0 +1,574 @@
+{
+  "images": [
+    {
+      "id": "broll-truck-night",
+      "src": "/img/blog/broll-truck-night.jpg",
+      "card": "/img/blog/broll-truck-night-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Man in a work jacket reading paperwork on a clipboard in a pickup cab at dusk, houses outside the windows",
+      "description": "AI-generated illustration, not a photo of a real job or person. A man in a canvas work jacket sits in the driver's seat of a pickup at dusk, reading paperwork on a clipboard by the glow of the dash; suburban houses and a streetlight through the windows. Dark night scene. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "after-hours admin: the shift after the truck is parked",
+        "quoting and paperwork at night",
+        "owner-operator workload",
+        "end-of-day job notes",
+        "why quotes go out late",
+        "fall and winter evenings"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "broll-kitchen-table-receipts",
+      "src": "/img/blog/broll-kitchen-table-receipts.jpg",
+      "card": "/img/blog/broll-kitchen-table-receipts-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Closed laptop, coffee mug, phone and crumpled receipts on a wooden table at night under a single light",
+      "description": "AI-generated illustration, not a real photo. Overhead view of a worn wooden table at night under one pool of light: a closed grey laptop, a mug of coffee, a smartphone with a dark screen and a spread of crumpled receipts and invoices. No people. Receipt capture starts on Pro.",
+      "best_for": [
+        "receipt capture (Pro feature)",
+        "kitchen-table bookkeeping",
+        "invoicing backlog",
+        "month-end admin",
+        "paper vs software",
+        "admin-hours stat card (40% only with the site qualifier)"
+      ],
+      "people": false,
+      "ai_generated": true
+    },
+    {
+      "id": "broll-voice-memo-reno",
+      "src": "/img/blog/broll-voice-memo-reno.jpg",
+      "card": "/img/blog/broll-voice-memo-reno-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Man in a dusty t-shirt recording a voice note on his phone in a gutted renovation room",
+      "description": "AI-generated illustration, not a photo of a real job or person. A man in a dusty grey t-shirt speaks into a phone held in front of his mouth like a voice note, in a gutted renovation room with exposed studs and a bright window; framed from the head to the thighs. Voice-to-quote starts on Pro. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "voice-to-quote (Pro): talk through a site visit, get a priced quote",
+        "site-visit notes",
+        "AI transcription",
+        "renovation contractors",
+        "quoting faster"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "broll-crew-drywall",
+      "src": "/img/blog/broll-crew-drywall.jpg",
+      "card": "/img/blog/broll-crew-drywall-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Two workers lifting a sheet of drywall into place in a framed room with exposed studs",
+      "description": "AI-generated illustration, not a photo of a real job or person. Two workers in fleece jackets lift a sheet of drywall into place in a framed-out room with exposed studs and a bright window opening; both men shown from the head down to mid-body. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "renovation and general contractors",
+        "crew scheduling and crew hours",
+        "labour cost and job costing",
+        "hiring and onboarding crews",
+        "winter indoor work"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "broll-interlock-crew-fall",
+      "src": "/img/blog/broll-interlock-crew-fall.jpg",
+      "card": "/img/blog/broll-interlock-crew-fall-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Two workers in toques laying interlocking pavers on a driveway beside a wheelbarrow of sand",
+      "description": "AI-generated illustration, not a photo of a real job or person. Two workers in toques and hoodies kneel on a residential driveway laying interlocking pavers, one tapping with a rubber mallet, beside a wheelbarrow of sand and paver stacks; late fall. Never caption as AZ Hardscapes, Reformity or any client crew. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "interlock, hardscape and landscaping contractors",
+        "fall season wrap-up",
+        "crew scheduling",
+        "job costing materials (pavers, sand)",
+        "Ontario residential jobs"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "broll-plumber-ptrap",
+      "src": "/img/blog/broll-plumber-ptrap.jpg",
+      "card": "/img/blog/broll-plumber-ptrap-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Plumber's hands turning a wrench on a chrome P-trap under a kitchen sink, lit by a work light",
+      "description": "AI-generated illustration, not a photo of a real job or person. Close-up of a plumber's hands and forearms turning a wrench on a chrome P-trap under a kitchen sink, a work light glowing at left; no face. Best at feed size (the wrench is an odd hybrid when viewed large).",
+      "best_for": [
+        "plumbers",
+        "service calls",
+        "parts and materials costing",
+        "emergency and after-hours jobs"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "broll-electrician-panel",
+      "src": "/img/blog/broll-electrician-panel.jpg",
+      "card": "/img/blog/broll-electrician-panel-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Electrician in a headlamp testing an open breaker panel with a probe in an unfinished basement",
+      "description": "AI-generated illustration, not a photo of a real job or person. An electrician in a headlamp and dark t-shirt touches a test probe to the breakers of an open residential panel in an unfinished concrete basement; framed from the head to the chest. Never caption as Nexline Electrical or any client. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "electricians",
+        "service and diagnostic work",
+        "field crews",
+        "winter indoor work"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "broll-snow-truck",
+      "src": "/img/blog/broll-snow-truck.jpg",
+      "card": "/img/blog/broll-snow-truck-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Pickup with a ladder rack and two shovels idling on a snowy residential street at dawn",
+      "description": "AI-generated illustration, not a real photo. Rear view of a dark pickup with a ladder rack, an extension ladder and two shovels, idling on a snow-covered residential street at dawn; exhaust plume, snowbanks and bare snowy trees. No people. Winter scene.",
+      "best_for": [
+        "winter and off-season planning",
+        "set up in the quiet season, live in about two weeks",
+        "early starts",
+        "snow-removal side work",
+        "year-end planning",
+        "14-day free trial timing"
+      ],
+      "people": false,
+      "ai_generated": true
+    },
+    {
+      "id": "broll-owner-shop-door",
+      "src": "/img/blog/broll-owner-shop-door.jpg",
+      "card": "/img/blog/broll-owner-shop-door-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Man in a canvas chore jacket standing arms crossed in a workshop doorway, lumber stacked in the yard",
+      "description": "AI-generated illustration, not a photo of a real job or person. A middle-aged man in a tan canvas chore jacket stands arms crossed in the open door of a weathered wooden workshop, looking out over a gravel yard with stacked lumber and a utility trailer; overcast sky. Portrait-like: never use for founder, team, customer or testimonial posts. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "owner-operator reflection",
+        "planning next season and growth",
+        "hiring and delegating",
+        "you started this to build, not to do admin",
+        "business-owner mindset"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "broll-hand-phone-glove",
+      "src": "/img/blog/broll-hand-phone-glove.jpg",
+      "card": "/img/blog/broll-hand-phone-glove-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Worker's bare hand holding a smartphone with a blank screen, a work glove below, on a jobsite",
+      "description": "AI-generated illustration, not a photo of a real job or person. Close-up of a worker's dirty bare hand holding a smartphone with a blank black screen, a grey dipped work glove below it, navy work jacket, blurred jobsite with OSB and studs behind; no face. Never add a fake screen; don't imply texting or card payments (not live yet).",
+      "best_for": [
+        "phone on the jobsite",
+        "replying to new leads fast",
+        "follow-up reminders",
+        "quote-accepted notifications",
+        "customer portal"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "broll-porch-handshake",
+      "src": "/img/blog/broll-porch-handshake.jpg",
+      "card": "/img/blog/broll-porch-handshake-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Two men shaking hands at the front steps of a brick house in autumn",
+      "description": "AI-generated illustration, not a photo of a real job or person. Two smiling men shake hands at the front porch steps of a brick bungalow in autumn, one in a brown canvas jacket on the step, one in a dark work jacket on the walkway; fallen leaves and a residential street. Looks like a testimonial scene: never pair with customer names, quotes, logos, case-study figures or review language. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "winning the job",
+        "online quote acceptance (e-signature)",
+        "customer relationships and referrals",
+        "first site visit",
+        "fall season"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "aic-phone-workbench",
+      "src": "/img/blog/aic-phone-workbench.jpg",
+      "card": "/img/blog/aic-phone-workbench-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Smartphone, tape measure and pencil on a sawdust-covered wooden workbench",
+      "description": "AI-generated illustration, not a real photo. A smartphone with a blank screen lies on a sawdust-covered pale wood workbench next to a yellow-and-grey tape measure and a pencil; soft window light. No people. Never add a fake screen. If used for the AI Caller: early access, separate add-on billed by talk minute, no results claims.",
+      "best_for": [
+        "missed calls while on the tools",
+        "speed to lead",
+        "lead follow-up",
+        "AI Caller explainer (early access)",
+        "focus on the work, not the phone"
+      ],
+      "people": false,
+      "ai_generated": true
+    },
+    {
+      "id": "aic-fence-post",
+      "src": "/img/blog/aic-fence-post.jpg",
+      "card": "/img/blog/aic-fence-post-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Man in a cap holding a new wooden fence post plumb in a backyard, a second post set behind him",
+      "description": "AI-generated illustration, not a photo of a real job or person. A man in a trucker cap and navy hoodie holds a new pressure-treated 4x4 fence post plumb in a backyard, a second post set at right, a grey privacy fence behind; late fall. Cropped to exclude a concrete bag with garbled pseudo-brand text. Never caption as Reformity's crew or a real job. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "fencing contractors",
+        "estimating fence jobs (e.g. 100 ft of 6 ft cedar with 2 gates)",
+        "spring and fall install season",
+        "job start"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "aic-homeowner-kitchen-call",
+      "src": "/img/blog/aic-homeowner-kitchen-call.jpg",
+      "card": "/img/blog/aic-homeowner-kitchen-call-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Woman on a phone call in a home kitchen at night, open shelves with mugs and bowls behind her",
+      "description": "AI-generated illustration, not a photo of a real job or person. A woman in a grey t-shirt stands in a home kitchen at night on a phone call, with open wood shelves of mugs and bowls, hanging pans and under-cabinet light. Illustrative only: never present it as a real call, a real lead, a recorded AI Caller conversation or a customer. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "the homeowner's side: calling contractors after hours",
+        "who calls back first",
+        "web-form leads at night",
+        "AI Caller explainer (early access), illustrative only"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "aic-truck-dash-phone",
+      "src": "/img/blog/aic-truck-dash-phone.jpg",
+      "card": "/img/blog/aic-truck-dash-phone-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Phone in a pickup's cupholder beside a takeaway coffee, folded paper and a work glove at blue hour",
+      "description": "AI-generated illustration, not a real photo. Interior of an older pickup at blue hour: a smartphone with a blank screen in the cupholder, a takeaway coffee with a sleeve, a folded paper and a knit work glove on the bench seat, the steering wheel at top left. No people. Keep copy to before or after the drive, never phone use while driving.",
+      "best_for": [
+        "early start: the truck is the office",
+        "daily schedule and crew notices",
+        "follow-up reminders between jobs",
+        "missed calls on the road"
+      ],
+      "people": false,
+      "ai_generated": true
+    },
+    {
+      "id": "aic-concrete-pour",
+      "src": "/img/blog/aic-concrete-pour.jpg",
+      "card": "/img/blog/aic-concrete-pour-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Two workers finishing a fresh concrete driveway slab with a bull float and an edger beside a house",
+      "description": "AI-generated illustration, not a photo of a real job or person. Two workers finish a fresh concrete driveway slab beside a grey-sided house: one pushes a bull float across the wet concrete, the other edges along the form boards; wheelbarrow, water jug and green summer trees. Summer scene. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "concrete contractors",
+        "summer season and weather-dependent scheduling",
+        "crew coordination",
+        "job costing (materials and labour)"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "aic-unsigned-quote",
+      "src": "/img/blog/aic-unsigned-quote.jpg",
+      "card": "/img/blog/aic-unsigned-quote-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Stack of blank paper with a pen on top, a mug and reading glasses on a dark table under warm light",
+      "description": "AI-generated illustration, not a real photo. A stack of blank white paper with a black pen on top under a warm spotlight on a dark wooden table at night, a mug at left and wire-rim reading glasses at right; heavy dark vignette. No people, no text. Never add fake quote content.",
+      "best_for": [
+        "unsigned quotes and quote follow-up",
+        "online quote acceptance (e-signature)",
+        "proposals and estimates",
+        "quotes nobody chased",
+        "after-hours admin"
+      ],
+      "people": false,
+      "ai_generated": true
+    },
+    {
+      "id": "aic-empty-office-night",
+      "src": "/img/blog/aic-empty-office-night.jpg",
+      "card": "/img/blog/aic-empty-office-night-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Small empty office at night with a desk phone, dark monitor, desk lamp and office chair",
+      "description": "AI-generated illustration, not a real photo. A small empty office at night lit by a desk lamp: an L-shaped desk with a corded desk phone in the foreground, a dark monitor, a mug, paper trays, an office chair and a dark window. No people. Shadows lifted slightly for small sizes. If used for the AI Caller: early access, separate add-on billed by talk minute.",
+      "best_for": [
+        "after-hours calls: the office closes at 5",
+        "missed calls",
+        "AI Caller explainer (early access)",
+        "web-form lead capture around the clock",
+        "small-office admin"
+      ],
+      "people": false,
+      "ai_generated": true
+    },
+    {
+      "id": "aic-interlock-summer",
+      "src": "/img/blog/aic-interlock-summer.jpg",
+      "card": "/img/blog/aic-interlock-summer-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Worker in a cap and safety glasses tapping an interlocking paver into place with a rubber mallet",
+      "description": "AI-generated illustration, not a photo of a real job or person. A worker in a black t-shirt, cap and safety glasses kneels on a sand bed tapping an interlocking paver into place with a rubber mallet, beside a wheelbarrow of sand and stacked pavers; cedars and a fence in summer haze. Summer scene. Never caption as AZ Hardscapes or any client crew. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "interlock and hardscape contractors",
+        "summer season",
+        "crew productivity",
+        "job costing materials"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "aic-couch-phone-evening",
+      "src": "/img/blog/aic-couch-phone-evening.jpg",
+      "card": "/img/blog/aic-couch-phone-evening-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Hands holding a smartphone with a blank screen on a sofa in a warmly lit living room",
+      "description": "AI-generated illustration, not a photo of a real job or person. Over-the-shoulder view of someone on a sofa holding a smartphone with a blank screen in both hands; blurred cushions, a side table and a plant behind in warm light; hands only, no face. Never add a fake screen; don't imply texting (SMS is not live yet).",
+      "best_for": [
+        "homeowners researching contractors in the evening",
+        "speed to lead",
+        "follow-up timing",
+        "customer portal and quote review at home"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "aic-sealcoat-driveway",
+      "src": "/img/blog/aic-sealcoat-driveway.jpg",
+      "card": "/img/blog/aic-sealcoat-driveway-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Worker spreading black sealcoat on an asphalt driveway with a squeegee in front of a brick bungalow",
+      "description": "AI-generated illustration, not a photo of a real job or person. A worker in a dark t-shirt and cap spreads black sealcoat on an asphalt driveway with a long-handled squeegee in front of a light-brick bungalow, a sealcoat tank trailer and a green bucket behind him; early summer. Never present the person as a NexusCRM customer, a named client, the founder, staff or a real event.",
+      "best_for": [
+        "asphalt paving and sealcoating contractors",
+        "seasonal route work",
+        "summer scheduling",
+        "crew productivity"
+      ],
+      "people": true,
+      "ai_generated": true
+    },
+    {
+      "id": "shot-ai-assistant",
+      "src": "/img/blog/shot-ai-assistant.jpg",
+      "card": "/img/blog/shot-ai-assistant-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "NexusCRM AI assistant screen with an empty chat and four suggested prompts, shown with sample data",
+      "description": "Real NexusCRM screen with sample data (invented names, 555 numbers, fakemail.ca emails). The 'NexusCRM AI - Operations Assistant' screen: left navigation, a New chat button, four suggested prompts (margin this month, pending invoices, watchlist projects, drafting a fence quote from notes) and a composer with Medium/High/Max effort toggles. Full capture, uncropped. Don't caption the notes prompt as voice-to-quote (voice-to-quote starts on Pro).",
+      "best_for": [
+        "AI is built into every plan",
+        "AI assistant: ask about margin, invoices, projects",
+        "draft a quote from site notes",
+        "product tour"
+      ],
+      "people": false,
+      "ai_generated": false
+    },
+    {
+      "id": "shot-dashboard",
+      "src": "/img/blog/shot-dashboard.jpg",
+      "card": "/img/blog/shot-dashboard-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "NexusCRM owner dashboard with a week of meetings, project schedule and monthly insights, sample data",
+      "description": "Real NexusCRM screen with sample data (invented names, 555 numbers, fakemail.ca emails). The owner dashboard: greeting with an OWNER badge, a week strip of meetings (Aug 31 - Sep 6, 2026), the upcoming project schedule and the top of the August 2026 insights row (margin, commissions, crew utilization, refunds). Full capture, uncropped. Don't call it 'this week'; margin and commissions are Pro features.",
+      "best_for": [
+        "product overview",
+        "the owner's morning view",
+        "scheduling and meetings",
+        "feature round-ups"
+      ],
+      "people": false,
+      "ai_generated": false
+    },
+    {
+      "id": "shot-job-economics",
+      "src": "/img/blog/shot-job-economics.jpg",
+      "card": "/img/blog/shot-job-economics-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "NexusCRM insights screen with job margin, crew hours and most profitable jobs, shown with sample data",
+      "description": "Real NexusCRM screen with sample data (invented names, 555 numbers, fakemail.ca emails). August 2026 insights: margin card, commissions, crew utilization by crew member, refunds, most profitable jobs and the margin watchlist. Full capture, uncropped. Figures are sample data: never present $43,041 or 77.3% as a customer's result. Job costing is a Pro feature.",
+      "best_for": [
+        "live job costing and margin (Pro)",
+        "crew utilization",
+        "know which jobs make money",
+        "pricing and profit posts"
+      ],
+      "people": false,
+      "ai_generated": false
+    },
+    {
+      "id": "shot-leads",
+      "src": "/img/blog/shot-leads.jpg",
+      "card": "/img/blog/shot-leads-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "NexusCRM lead intake screen with status and source filters and a table of sample leads",
+      "description": "Real NexusCRM screen with sample data (invented names, 555 numbers, fakemail.ca emails). The 'Lead intake' screen: an unassigned-leads alert, Refresh and Add lead buttons, search with rep and follow-up filters, status chips, lead-source chips and a table of sample leads. Full capture, uncropped. Source chips (Bark, Meta, Google, Home Depot) are filter labels, not partnerships or integrations.",
+      "best_for": [
+        "lead intake and lead sources",
+        "unassigned leads and nothing falling through the cracks",
+        "follow-up tracking",
+        "Meta Lead Ads and website forms"
+      ],
+      "people": false,
+      "ai_generated": false
+    },
+    {
+      "id": "shot-login",
+      "src": "/img/blog/shot-login.jpg",
+      "card": "/img/blog/shot-login-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "NexusCRM sign-in screen with a dusk house photo and the line 'Your business. Automated.'",
+      "description": "Real NexusCRM sign-in screen: left panel with a dark photo of a modern house at dusk, the NexusCRM wordmark and 'Your business. Automated.'; right panel with email and password fields and an Enter console button. A stale 'FOUNDATION' badge was trimmed off the bottom strip. Low value for posts: never pair it with sign-in calls to action or links (it can read as a credential page).",
+      "best_for": [
+        "your brand on every deployment",
+        "private instance"
+      ],
+      "people": false,
+      "ai_generated": false
+    },
+    {
+      "id": "shot-payroll",
+      "src": "/img/blog/shot-payroll.jpg",
+      "card": "/img/blog/shot-payroll-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "NexusCRM crew and subcontractor ledger with payable, paid and outstanding totals, sample data",
+      "description": "Real NexusCRM screen with sample data (invented names, 555 numbers, fakemail.ca emails). The 'Crew & Subs Ledger' (payroll): tabs for all payees, crew leads and subcontractors, total payable, paid and outstanding balances, and crew-lead rows on a sample backyard-patio project with Record and Mark paid buttons. Full capture, uncropped. Payroll is a Pro feature; don't turn the 'per CRA rules' UI line into a compliance claim.",
+      "best_for": [
+        "crew and subcontractor payroll (Pro)",
+        "paying subs",
+        "labour cost tracking",
+        "Canadian contractor admin"
+      ],
+      "people": false,
+      "ai_generated": false
+    },
+    {
+      "id": "shot-quotes",
+      "src": "/img/blog/shot-quotes.jpg",
+      "card": "/img/blog/shot-quotes-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "NexusCRM quotes list with status filters, quote totals and an overdue follow-up flag, sample data",
+      "description": "Real NexusCRM screen with sample data (invented names, 555 numbers, fakemail.ca emails). The quotes list: search, rep filter, status chips (New through Expired), '9 of 9 quotes' and rows of sample interlock and landscaping quotes with totals and statuses, one flagged overdue for follow-up. Full capture, uncropped; the right-most Created column is cut off in the original capture.",
+      "best_for": [
+        "quote pipeline",
+        "quote follow-up and overdue flags",
+        "approved vs pending quotes",
+        "interlock and landscaping quoting"
+      ],
+      "people": false,
+      "ai_generated": false
+    },
+    {
+      "id": "shot-schedule",
+      "src": "/img/blog/shot-schedule.jpg",
+      "card": "/img/blog/shot-schedule-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "NexusCRM schedule calendar in week view with status, crew and assignee filters",
+      "description": "Real NexusCRM Schedule Calendar week view: a read-only rollup of scheduled project events across crews, additive to Google Calendar sync, with a status legend, crew filter and one in-progress event bar; the lower half is empty. Full capture, uncropped. Use only for posts about scheduling or Google Calendar sync.",
+      "best_for": [
+        "scheduling with Google Calendar sync",
+        "dispatch week view"
+      ],
+      "people": false,
+      "ai_generated": false
+    },
+    {
+      "id": "plate-network",
+      "src": "/img/blog/plate-network.jpg",
+      "card": "/img/blog/plate-network-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Dark background with a faint grid and glowing cyan network meshes at the left and right edges",
+      "description": "Abstract AI-generated brand background, no text. Near-black background with a faint grid and glowing cyan low-poly network meshes at the left and right edges; empty dark centre. Same plate as the NexusCRM covers. A 40% admin stat card must carry the site qualifier.",
+      "best_for": [
+        "branded text cards with the headline in the empty centre",
+        "announcements: 14-day free trial, 30-day launch guarantee",
+        "integrations and connected workflow",
+        "tip and quote cards",
+        "40% admin stat card with the site qualifier"
+      ],
+      "people": false,
+      "ai_generated": false
+    },
+    {
+      "id": "plate-trails",
+      "src": "/img/blog/plate-trails.jpg",
+      "card": "/img/blog/plate-trails-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Dark background with a faint grid and cyan light trails sweeping diagonally from lower left to upper right",
+      "description": "Abstract AI-generated brand background, no text. Near-black background with a faint grid and sweeping cyan light trails running diagonally from bottom left to top right; dark empty space at top left and bottom right. Background of the NexusAI GTA covers.",
+      "best_for": [
+        "speed and automation themes: follow-ups that send themselves, speed to lead",
+        "NexusAI GTA parent-brand posts",
+        "announcement and tip cards"
+      ],
+      "people": false,
+      "ai_generated": false
+    },
+    {
+      "id": "plate-waveform",
+      "src": "/img/blog/plate-waveform.jpg",
+      "card": "/img/blog/plate-waveform-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "Dark background with a faint grid and a cyan audio waveform running across the middle",
+      "description": "Abstract AI-generated brand background, no text. Near-black background with a faint grid and a horizontal cyan audio waveform of vertical bars across the middle, bright at the edges and dim in the centre. Reads as voice: pair voice-to-quote with 'starts on Pro' and the AI Caller with 'early access, separate add-on, billed by talk minute'.",
+      "best_for": [
+        "voice-to-quote (Pro)",
+        "AI transcription",
+        "AI Caller announcements (early access)",
+        "audio and podcast posts"
+      ],
+      "people": false,
+      "ai_generated": false
+    },
+    {
+      "id": "cover-nexuscrm-youtube-banner",
+      "src": "/img/blog/cover-nexuscrm-youtube-banner.jpg",
+      "card": "/img/blog/cover-nexuscrm-youtube-banner-800.jpg",
+      "width": 1600,
+      "height": 840,
+      "alt": "NexusCRM logo and the tagline 'AI-powered CRM for service businesses, Toronto' on a dark network background",
+      "description": "NexusCRM brand banner: the N mark, the 'NexusCRM' wordmark and 'AI-POWERED CRM FOR SERVICE BUSINESSES - TORONTO' centred on the network plate. Own brand only; no pricing or feature claims. Brand-safe fallback hero and share image; the lockup fills the centre, so it can't carry another headline.",
+      "best_for": [
+        "fallback og:image for blog posts without a hero",
+        "brand intro posts"
+      ],
+      "people": false,
+      "ai_generated": false
+    }
+  ]
+}

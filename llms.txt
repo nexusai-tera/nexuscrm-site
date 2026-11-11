@@ -41,3 +41,12 @@
 - [Housecall Pro Alternative](https://crm.nexusaigta.ca/housecall-pro-alternative.html): fair head-to-head vs Housecall Pro
 - [ServiceTitan Alternative](https://crm.nexusaigta.ca/servicetitan-alternative.html): ServiceTitan-grade depth without per-tech pricing
 - [Canadian CRM](https://crm.nexusaigta.ca/canadian-crm.html): data residency, PIPEDA alignment, HST-native invoicing, CAD pricing
+
+<!-- blog:start -->
+## Blog
+
+- [NexusCRM Blog](https://crm.nexusaigta.ca/blog/): guides for contractor crews on estimating and quoting, job costing, crew pay, seasonal planning and cash flow; RSS feed: https://crm.nexusaigta.ca/blog/feed.xml
+- [How to price interlock and hardscape jobs for 2027](https://crm.nexusaigta.ca/blog/how-to-price-interlock-jobs.html): How to price interlock driveways and patios from your own costs: dig-out, base, pavers, labour by the crew-day, equipment, overhead and margin. (2026-11-11)
+- [Job costing for contractors: see each job's real margin](https://crm.nexusaigta.ca/blog/job-costing-for-contractors.html): A plain job costing method for 4–15 person crews: track labour, materials, subs and receipts per job, and see margin while the crew is still on site. (2026-11-11)
+- [Ontario contractor year-end checklist for 2026](https://crm.nexusaigta.ca/blog/ontario-contractor-year-end-checklist.html): A December checklist for Ontario contractors: T4 and T5018 slips, WSIB, HST receipts, the 2027 holdback change, records and a job-by-job margin review. (2026-11-11)
+<!-- blog:end -->
