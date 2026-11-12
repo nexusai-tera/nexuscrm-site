@@ -9,6 +9,9 @@ name: Publish blog
 on:
   schedule:
     - cron: '17 */3 * * *'
+    # The n8n writer runs Tuesdays at 07:30 Toronto (Wednesday is its retry day). GitHub often
+    # delays or drops scheduled runs, so check hourly on those days to publish a new post sooner.
+    - cron: '47 11-22 * * 2,3'
   workflow_dispatch:
   push:
     branches: [master]

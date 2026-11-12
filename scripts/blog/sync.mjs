@@ -79,7 +79,7 @@ export async function fetchFeed(url, { timeoutMs = 20000, backoffMs = 2000, log 
   return last;
 }
 
-// Checks the decoded feed. Returns { error } or { ready, unpublish }.
+// Checks the decoded feed. Returns { error } or { ready, unpublish, errors }.
 export function parseFeed(text) {
   let data;
   try { data = JSON.parse(text); } catch (e) { return { error: `feed is not valid JSON (${e.message})` }; }
@@ -90,7 +90,10 @@ export function parseFeed(text) {
   if (!Array.isArray(ready)) return { error: '"ready" is not an array' };
   if (!Array.isArray(unpublish)) return { error: '"unpublish" is not an array' };
   if (ready.length > MAX_LIST || unpublish.length > MAX_LIST) return { error: `feed lists ${ready.length} ready and ${unpublish.length} unpublish items; more than ${MAX_LIST} is treated as a broken feed` };
-  return { ready, unpublish };
+  // errors[]: slugs of ready rows the n8n API could not serve (unreadable post_json, or a draft slug
+  // that differs from post_slug). Informational only; anything that is not a list of strings is ignored.
+  const errors = Array.isArray(data.errors) ? data.errors.filter((e) => typeof e === 'string' && e.trim()).slice(0, MAX_LIST) : [];
+  return { ready, unpublish, errors };
 }
 
 // printable form of an untrusted value (never throws)
@@ -127,6 +130,9 @@ export async function sync({ root, feedUrl, now = new Date(), timeoutMs = 20000,
   let existing = [];
   try { existing = fs.readdirSync(postsDir).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5)); } catch { existing = []; }
   const existingSet = new Set(existing);
+
+  // rows the API dropped from ready[]: warn (exit code unchanged) so the run log says why nothing appeared
+  for (const e of feed.errors || []) note(`feed: ready row ${show(e)} has unreadable or mismatched post_json in n8n; not published (fix post_json or post_slug in NexusCRM Blog Topics, or set the row to held/skipped)`);
 
   // removals (validated first, applied after the writes are planned)
   const removeSet = new Set();

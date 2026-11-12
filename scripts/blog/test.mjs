@@ -1085,6 +1085,21 @@ describe('sync', () => {
     assert.ok(!exists(dir, 'blog/posts/both-post.json'));
   });
 
+  test('feed errors[] are logged as warnings and do not change the exit code', async () => {
+    const dir = makeSite({ posts: [makePost('existing-post')] });
+    routes['/feed-errors'] = json({ ok: true, ready: [], unpublish: [], errors: ['bad-json-post', 42, { slug: 'x' }, ''] });
+    const before = snapshot(dir);
+    const r = await runSync(dir, '/feed-errors');
+    assert.equal(r.code, 0, r.out);
+    assert.deepEqual(snapshot(dir), before, 'nothing written or deleted');
+    assert.match(r.out, /feed: ready row "bad-json-post" has unreadable or mismatched post_json in n8n; not published/);
+    assert.equal((r.out.match(/has unreadable or mismatched post_json/g) || []).length, 1, 'only string entries are reported');
+    routes['/feed-errors-bad'] = json({ ok: true, ready: [], unpublish: [], errors: 'not-a-list' });
+    const r2 = await runSync(dir, '/feed-errors-bad');
+    assert.equal(r2.code, 0, r2.out);
+    assert.doesNotMatch(r2.out, /unreadable or mismatched/);
+  });
+
   test('broken feeds exit 1 without touching files', async () => {
     const dir = makeSite({ posts: [makePost('safe-post')] });
     routes['/badjson'] = json('{"ok": true, "ready": [');
