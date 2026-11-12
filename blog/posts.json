@@ -1,6 +1,28 @@
 {
   "posts": [
     {
+      "slug": "how-to-follow-up-on-a-quote",
+      "url": "https://crm.nexusaigta.ca/blog/how-to-follow-up-on-a-quote.html",
+      "title": "How to follow up on a quote without being pushy",
+      "description": "How to follow up on a contractor quote: a three-touch cadence, four short scripts, CASL basics for follow-up emails and when to close a quote out.",
+      "excerpt": "Some fall quotes go quiet, and a 'call me in spring' job can get forgotten by April. Here is a simple follow-up cadence, four short scripts, the CASL basics for follow-up emails and a rule for when to stop.",
+      "category": "Estimating & quoting",
+      "tags": [
+        "quotes",
+        "follow-up",
+        "casl",
+        "estimating",
+        "sales"
+      ],
+      "date": "2026-11-12",
+      "updated": null,
+      "image": "aic-unsigned-quote",
+      "image_url": "https://crm.nexusaigta.ca/img/blog/aic-unsigned-quote.jpg",
+      "read_minutes": 8,
+      "word_count": 1726,
+      "primary_keyword": "how to follow up on a contractor quote"
+    },
+    {
       "slug": "how-to-price-interlock-jobs",
       "url": "https://crm.nexusaigta.ca/blog/how-to-price-interlock-jobs.html",
       "title": "How to price interlock and hardscape jobs for 2027",
