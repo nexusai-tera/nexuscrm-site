@@ -2,8 +2,9 @@
 # - schedule / manual run: pull ready posts and unpublish requests from the n8n feed (sync.mjs),
 #   then render the blog (build.mjs) and commit any change.
 # - push to master touching the blog sources: render and commit (no sync).
-# Pushes made with GITHUB_TOKEN do not start a Pages build for a branch-deployed site, so after
-# a push this job asks the Pages API for one and waits up to 5 minutes for it.
+# A push made with GITHUB_TOKEN does not reliably start a Pages build for a branch-deployed site, so
+# after a push this job waits a minute for one, asks the Pages API for one only if none started (two
+# builds of one commit get one cancelled), and waits up to 5 minutes for it to finish.
 name: Publish blog
 
 on:
@@ -133,28 +134,55 @@ jobs:
           API: https://api.github.com/repos/${{ github.repository }}/pages/builds
           SHA: ${{ steps.push.outputs.sha }}
         run: |
-          code="$(curl -sS -o "$RUNNER_TEMP/pages-request.json" -w '%{http_code}' -X POST \
-            -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" \
-            "$API" || echo 000)"
-          if [ "$code" != "201" ] && [ "$code" != "200" ]; then
-            echo "::warning::Pages build request returned HTTP $code; the site may not update until the next push by a person."
-            cat "$RUNNER_TEMP/pages-request.json" 2>/dev/null || true
-            exit 0
+          set -u
+          # Statuses of the recent Pages builds of $SHA, newest first ("" when there is none yet).
+          builds_for_sha() {
+            curl -sS -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" "$API?per_page=10" 2>/dev/null \
+              | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const a=JSON.parse(s);process.stdout.write((Array.isArray(a)?a:[]).filter(b=>b&&b.commit===process.env.SHA).map(b=>b.status).join(" "))}catch{process.stdout.write("")}})'
+          }
+          # A bot push can start its own Pages build. Requesting a second build of the same commit gets one of
+          # the two cancelled ("Page build failed.", seen on 2026-11-12), so wait up to a minute for an automatic
+          # build and only request one when none shows up.
+          seen=""
+          for i in 1 2 3 4; do
+            sleep 15
+            seen="$(builds_for_sha)"
+            if [ -n "$seen" ]; then break; fi
+          done
+          if [ -n "$seen" ]; then
+            echo "A Pages build of $SHA is already running ($seen); not requesting another."
+          else
+            code="$(curl -sS -o "$RUNNER_TEMP/pages-request.json" -w '%{http_code}' -X POST \
+              -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" \
+              "$API" || echo 000)"
+            if [ "$code" != "201" ] && [ "$code" != "200" ]; then
+              echo "::warning::No Pages build started for $SHA and the build request returned HTTP $code; the site may not update until the next push by a person."
+              cat "$RUNNER_TEMP/pages-request.json" 2>/dev/null || true
+              exit 0
+            fi
+            echo "Pages build requested (HTTP $code); waiting for the build of $SHA"
           fi
-          echo "Pages build requested (HTTP $code); waiting for the build of $SHA"
-          status="unknown"
+          # Success as soon as any build of $SHA is built. Failure only when every build of $SHA has errored on
+          # two checks in a row (a duplicate build is cancelled while the other one is still building).
+          all_errored_checks=0
           deadline=$((SECONDS + 300))
           while [ "$SECONDS" -lt "$deadline" ]; do
+            seen="$(builds_for_sha)"
+            echo "Pages builds of $SHA: ${seen:-none yet}"
+            case " $seen " in *" built "*) echo "Pages build finished for $SHA"; exit 0 ;; esac
+            all_errored=false
+            if [ -n "$seen" ]; then
+              all_errored=true
+              for st in $seen; do if [ "$st" != "errored" ]; then all_errored=false; fi; done
+            fi
+            if [ "$all_errored" = true ]; then all_errored_checks=$((all_errored_checks + 1)); else all_errored_checks=0; fi
+            if [ "$all_errored_checks" -ge 2 ]; then
+              echo "::error::Every GitHub Pages build for $SHA errored"
+              exit 1
+            fi
             sleep 15
-            latest="$(curl -sS -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" "$API/latest" || echo '{}')"
-            status="$(printf '%s' "$latest" | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{const j=JSON.parse(s);process.stdout.write((j.status||"unknown")+" "+(j.commit||""))}catch{process.stdout.write("unknown")}})')"
-            echo "Latest Pages build: $status"
-            case "$status" in
-              "built $SHA") echo "Pages build finished for $SHA"; exit 0 ;;
-              "errored $SHA") echo "::error::The GitHub Pages build for $SHA errored"; exit 1 ;;
-            esac
           done
-          echo "::warning::No finished Pages build for $SHA after 5 minutes (last seen: $status)"
+          echo "::warning::No finished Pages build for $SHA after 5 minutes (last seen: ${seen:-none})"
 
       - name: Report a failed sync
         if: steps.sync.outcome == 'failure'
